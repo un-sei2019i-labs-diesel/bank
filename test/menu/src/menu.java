@@ -8,7 +8,8 @@ public class menu {
         Scanner sn = new Scanner(System.in);
         boolean salir = false;
         int opcion; //Guardaremos la opcion del usuario
- 
+        int a,b,c;
+
         while (!salir) {
  
             System.out.println("1. Suma");
@@ -25,28 +26,28 @@ public class menu {
                     case 1:
                         System.out.println("Suma");
                         System.out.println("Primer entero");
-                        int a = sn.nextInt();
+                        a = sn.nextInt();
                         System.out.println("Segundo entero");
-                        int b = sn.nextInt();
-                        int c = suma.sumar(a,b);
+                        b = sn.nextInt();
+                        c = suma.sumar(a,b);
                         System.out.println(a +" + "+ b + "= "+ c);
                         break;
                     case 2:
                         System.out.println("Resta");
                         System.out.println("Primer entero");
-                        int a = sn.nextInt();
+                        a = sn.nextInt();
                         System.out.println("Segundo entero");
-                        int b = sn.nextInt();
-                        int c = Resta.restar(a,b);
+                        b = sn.nextInt();
+                        c = Resta.restar(a,b);
                         System.out.println(a +" - "+ b + "= "+ c);
                         break;
                     case 3:
                         System.out.println("Multiplicacion");
                         System.out.println("Primer entero");
-                        int a = sn.nextInt();
+                        a = sn.nextInt();
                         System.out.println("Segundo entero");
-                        int b = sn.nextInt();
-                        int c = multiplicacion.multiplicar(a,b);
+                        b = sn.nextInt();
+                        c = multiplicacion.multiplicar(a,b);
                         System.out.println(a +" X "+ b + "= "+ c);
                         break;
                     case 4:
