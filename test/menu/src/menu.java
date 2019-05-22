@@ -1,14 +1,15 @@
+import static java.lang.Integer.sum;
 import java.util.InputMismatchException;
 import java.util.Scanner;
  
 public class menu {
  
     public static void main(String[] args) {
- 
+               
         Scanner sn = new Scanner(System.in);
         boolean salir = false;
         int opcion; //Guardaremos la opcion del usuario
- 
+        
         while (!salir) {
  
             System.out.println("1. Suma");
@@ -44,5 +45,4 @@ public class menu {
         }
  
     }
- 
 }
