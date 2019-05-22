@@ -30,7 +30,7 @@ public class menu {
                         System.out.println("Segundo entero");
                         b = sn.nextInt();
                         c = Sumatoria.suma(a,b);
-                        System.out.println(a +" + "+ b + "= "+ c);
+                        System.out.println(a +" + "+ b + " = "+ c);
                         break;
                     case 2:
                         System.out.println("Resta");
@@ -39,7 +39,7 @@ public class menu {
                         System.out.println("Segundo entero");
                         b = sn.nextInt();
                         c = Resta.resta(a,b);
-                        System.out.println(a +" - "+ b + "= "+ c);
+                        System.out.println(a +" - "+ b + " = "+ c);
                         break;
                     case 3:
                         System.out.println("Multiplicacion");
@@ -48,7 +48,7 @@ public class menu {
                         System.out.println("Segundo entero");
                         b = sn.nextInt();
                         c = Multiplicacion.multiplica(a,b);
-                        System.out.println(a +" X "+ b + "= "+ c);
+                        System.out.println(a +" X "+ b + " = "+ c);
                         break;
                     case 4:
                         salir = true;
