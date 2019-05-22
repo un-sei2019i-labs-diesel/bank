@@ -1,27 +1,27 @@
 import java.util.InputMismatchException;
 import java.util.Scanner;
- 
+
 public class menu {
- 
+
     public static void main(String[] args) {
- 
+
         Scanner sn = new Scanner(System.in);
         boolean salir = false;
         int opcion; //Guardaremos la opcion del usuario
         int a,b,c;
 
         while (!salir) {
- 
+
             System.out.println("1. Suma");
             System.out.println("2. Resta");
             System.out.println("3. Multiplicacion");
             System.out.println("4. Salir");
- 
+
             try {
- 
+
                 System.out.println("Escribe una de las opciones");
                 opcion = sn.nextInt();
- 
+
                 switch (opcion) {
                     case 1:
                         System.out.println("Suma");
@@ -29,7 +29,7 @@ public class menu {
                         a = sn.nextInt();
                         System.out.println("Segundo entero");
                         b = sn.nextInt();
-                        c = suma.sumar(a,b);
+                        c = Sumatoria.suma(a,b);
                         System.out.println(a +" + "+ b + "= "+ c);
                         break;
                     case 2:
@@ -38,7 +38,7 @@ public class menu {
                         a = sn.nextInt();
                         System.out.println("Segundo entero");
                         b = sn.nextInt();
-                        c = Resta.restar(a,b);
+                        c = Resta.resta(a,b);
                         System.out.println(a +" - "+ b + "= "+ c);
                         break;
                     case 3:
@@ -47,7 +47,7 @@ public class menu {
                         a = sn.nextInt();
                         System.out.println("Segundo entero");
                         b = sn.nextInt();
-                        c = multiplicacion.multiplicar(a,b);
+                        c = Multiplicacion.multiplica(a,b);
                         System.out.println(a +" X "+ b + "= "+ c);
                         break;
                     case 4:
@@ -61,7 +61,7 @@ public class menu {
                 sn.next();
             }
         }
- 
+
     }
- 
+
 }
