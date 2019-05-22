@@ -12,16 +12,9 @@ import java.util.Scanner;
  * @author Cesar
  */
 public class Resta {
-
-    /**
-     * @param args the command line arguments
-     */
-    public static void main(String[] args) {
-        Scanner sc = new Scanner(System.in);
-        int a = sc.nextInt();
-        int b = sc.nextInt();
-        int c = a-b;
-        System.out.println(c);
-    }
+        public static int resta(int min, int sust){
+            int respuesta = min-sust;
+            return respuesta;
+        }
     
 }
