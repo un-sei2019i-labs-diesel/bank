@@ -1,7 +1,7 @@
 apply plugin: 'com.android.application'
 
 android {
-    compileSdkVersion 28
+    compileSdkVersion 23
     defaultConfig {
         applicationId "com.example.loginapp"
         minSdkVersion 21

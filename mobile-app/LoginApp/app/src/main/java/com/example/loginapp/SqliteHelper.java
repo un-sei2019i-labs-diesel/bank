@@ -9,7 +9,7 @@ import android.database.sqlite.SQLiteOpenHelper;
 public class SqliteHelper extends SQLiteOpenHelper {
 
     //DATABASE NAME
-    public static final String DATABASE_NAME = "loopwiki.com";
+    public static final String DATABASE_NAME = "bank-app-db";
 
     //DATABASE VERSION
     public static final int DATABASE_VERSION = 1;
@@ -18,25 +18,29 @@ public class SqliteHelper extends SQLiteOpenHelper {
     public static final String TABLE_USERS = "users";
 
     //TABLE USERS COLUMNS
-    //ID COLUMN @primaryKey
+    //COLUMN id @primaryKey
     public static final String KEY_ID = "id";
 
-    //COLUMN user name
+    //COLUMN username
     public static final String KEY_USER_NAME = "username";
 
-    //COLUMN email
-    public static final String KEY_EMAIL = "email";
+    //COLUMN change_date
+    public static final String KEY_CHANGE_DATE = "change_date";
 
     //COLUMN password
     public static final String KEY_PASSWORD = "password";
+
+    //COLUMN account_number
+    public static final String KEY_ACCOUNT_NUMBER = "account_number";
 
     //SQL for creating users table
     public static final String SQL_TABLE_USERS = " CREATE TABLE " + TABLE_USERS
             + " ( "
             + KEY_ID + " INTEGER PRIMARY KEY, "
             + KEY_USER_NAME + " TEXT, "
-            + KEY_EMAIL + " TEXT, "
-            + KEY_PASSWORD + " TEXT"
+            + KEY_CHANGE_DATE + " NUMERIC, "
+            + KEY_PASSWORD + " TEXT, "
+            + KEY_ACCOUNT_NUMBER + " NUMERIC"
             + " ) ";
 
 
