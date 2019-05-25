@@ -113,6 +113,14 @@ public class RegisterActivity extends AppCompatActivity {
                 valid = false;
                 textInputLayoutID.setError("Id is too short!");
             }
+
+            if (ID.matches("\\d+")) {
+                valid = true;
+                textInputLayoutPassword.setError(null);
+            } else {
+                valid = false;
+                textInputLayoutPassword.setError("ID must be numeric!");
+            }
         }
 
         //Handling validation for Username field
