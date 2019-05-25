@@ -114,20 +114,19 @@ public class SqliteHelper extends SQLiteOpenHelper {
         return null;
     }
 
-    public boolean isEmailExists(String email) {
+    public boolean doesExist(String ID, String Username) {
         SQLiteDatabase db = this.getReadableDatabase();
-        Cursor cursor = db.query(TABLE_USERS,// Selecting Table
-                new String[]{KEY_ID, KEY_USER_NAME, KEY_EMAIL, KEY_PASSWORD},//Selecting columns want to query
-                KEY_EMAIL + "=?",
-                new String[]{email},//Where clause
-                null, null, null);
+        Cursor cursor = db.rawQuery(
+                "SELECT * FROM " +  TABLE_USERS
+                        + " WHERE " + KEY_USER_NAME + " = " + Username
+                        + " OR " + KEY_ID + " = " + ID, null);
 
         if (cursor != null && cursor.moveToFirst()&& cursor.getCount()>0) {
-            //if cursor has value then in user database there is user associated with this given email so return true
+            //if cursor has value then in user database there is user associated with this given id or username so return true
             return true;
         }
 
-        //if email does not exist return false
+        //if id and username does not exist return false
         return false;
     }
 }

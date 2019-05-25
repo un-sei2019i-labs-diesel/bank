@@ -88,9 +88,9 @@ public class LoginActivity extends AppCompatActivity {
 
     //this method is used to connect XML views to its Objects
     private void initViews() {
-        editTextEmail = (EditText) findViewById(R.id.editTextEmail);
+        editTextUsername = (EditText) findViewById(R.id.editTextUsername);
         editTextPassword = (EditText) findViewById(R.id.editTextPassword);
-        textInputLayoutEmail = (TextInputLayout) findViewById(R.id.textInputLayoutEmail);
+        textInputLayoutUsername = (TextInputLayout) findViewById(R.id.textInputLayoutUserName);
         textInputLayoutPassword = (TextInputLayout) findViewById(R.id.textInputLayoutPassword);
         buttonLogin = (Button) findViewById(R.id.buttonLogin);
 
@@ -113,30 +113,30 @@ public class LoginActivity extends AppCompatActivity {
         boolean valid = false;
 
         //Get values from EditText fields
-        String Email = editTextEmail.getText().toString();
+        String Username = editTextUsername.getText().toString();
         String Password = editTextPassword.getText().toString();
-
-        //Handling validation for Email field
-        if (!android.util.Patterns.EMAIL_ADDRESS.matcher(Email).matches()) {
-            valid = false;
-            textInputLayoutEmail.setError("Please enter valid email!");
-        } else {
-            valid = true;
-            textInputLayoutEmail.setError(null);
-        }
 
         //Handling validation for Password field
         if (Password.isEmpty()) {
             valid = false;
             textInputLayoutPassword.setError("Please enter valid password!");
         } else {
-            if (Password.length() > 5) {
+            if (Password.length() == 6) {
                 valid = true;
                 textInputLayoutPassword.setError(null);
             } else {
                 valid = false;
-                textInputLayoutPassword.setError("Password is to short!");
+                textInputLayoutPassword.setError("Password length must be 6!");
             }
+
+            if (Password.matches("\\d+")) {
+                valid = true;
+                textInputLayoutPassword.setError(null);
+            } else {
+                valid = false;
+                textInputLayoutPassword.setError("Password must be numeric!");
+            }
+
         }
 
         return valid;

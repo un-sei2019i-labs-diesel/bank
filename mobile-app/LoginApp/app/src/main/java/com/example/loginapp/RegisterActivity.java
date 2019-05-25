@@ -15,13 +15,13 @@ import android.widget.TextView;
 public class RegisterActivity extends AppCompatActivity {
 
     //Declaration EditTexts
-    EditText editTextUserName;
-    EditText editTextEmail;
+    EditText editTextID;
+    EditText editTextUsername;
     EditText editTextPassword;
 
     //Declaration TextInputLayout
-    TextInputLayout textInputLayoutUserName;
-    TextInputLayout textInputLayoutEmail;
+    TextInputLayout textInputLayoutID;
+    TextInputLayout textInputLayoutUsername;
     TextInputLayout textInputLayoutPassword;
 
     //Declaration Button
@@ -41,15 +41,15 @@ public class RegisterActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 if (validate()) {
-                    String UserName = editTextUserName.getText().toString();
-                    String Email = editTextEmail.getText().toString();
+                    String ID = editTextID.getText().toString();
+                    String Username = editTextUsername.getText().toString();
                     String Password = editTextPassword.getText().toString();
 
-                    //Check in the database is there any user associated with  this email
-                    if (!sqliteHelper.isEmailExists(Email)) {
+                    //Check in the database is there any user associated with  this id, username
+                    if (!sqliteHelper.doesExist(ID, Username)) {
 
-                        //Email does not exist now add new user to database
-                        sqliteHelper.addUser(new User(null, UserName, Email, Password));
+                        //does not exist now add new user to database
+                        sqliteHelper.addUser(new User(ID, Username, "null", Password, "null"));
                         Snackbar.make(buttonRegister, "User created successfully! Please Login ", Snackbar.LENGTH_LONG).show();
                         new Handler().postDelayed(new Runnable() {
                             @Override
@@ -60,7 +60,7 @@ public class RegisterActivity extends AppCompatActivity {
                     }else {
 
                         //Email exists with email input provided so show error user already exist
-                        Snackbar.make(buttonRegister, "User already exists with same email ", Snackbar.LENGTH_LONG).show();
+                        Snackbar.make(buttonRegister, "User already exists with same id or username ", Snackbar.LENGTH_LONG).show();
                     }
 
 
@@ -82,12 +82,12 @@ public class RegisterActivity extends AppCompatActivity {
 
     //this method is used to connect XML views to its Objects
     private void initViews() {
-        editTextEmail = (EditText) findViewById(R.id.editTextEmail);
+        editTextUsername = (EditText) findViewById(R.id.editTextUsername);
         editTextPassword = (EditText) findViewById(R.id.editTextPassword);
-        editTextUserName = (EditText) findViewById(R.id.editTextUserName);
-        textInputLayoutEmail = (TextInputLayout) findViewById(R.id.textInputLayoutEmail);
+        editTextID = (EditText) findViewById(R.id.editTextID);
+        textInputLayoutUsername = (TextInputLayout) findViewById(R.id.textInputLayoutUsername);
         textInputLayoutPassword = (TextInputLayout) findViewById(R.id.textInputLayoutPassword);
-        textInputLayoutUserName = (TextInputLayout) findViewById(R.id.textInputLayoutUserName);
+        textInputLayoutID = (TextInputLayout) findViewById(R.id.textInputLayoutID);
         buttonRegister = (Button) findViewById(R.id.buttonRegister);
 
     }
@@ -97,31 +97,36 @@ public class RegisterActivity extends AppCompatActivity {
         boolean valid = false;
 
         //Get values from EditText fields
-        String UserName = editTextUserName.getText().toString();
-        String Email = editTextEmail.getText().toString();
+        String ID = editTextID.getText().toString();
+        String Username = editTextUsername.getText().toString();
         String Password = editTextPassword.getText().toString();
 
-        //Handling validation for UserName field
-        if (UserName.isEmpty()) {
+        //Handling validation for id field
+        if (ID.isEmpty()) {
             valid = false;
-            textInputLayoutUserName.setError("Please enter valid username!");
+            textInputLayoutID.setError("Please enter valid id!");
         } else {
-            if (UserName.length() > 5) {
+            if (ID.length() > 5) {
                 valid = true;
-                textInputLayoutUserName.setError(null);
+                textInputLayoutID.setError(null);
             } else {
                 valid = false;
-                textInputLayoutUserName.setError("Username is to short!");
+                textInputLayoutID.setError("Id is too short!");
             }
         }
 
-        //Handling validation for Email field
-        if (!android.util.Patterns.EMAIL_ADDRESS.matcher(Email).matches()) {
+        //Handling validation for Username field
+        if (Username.isEmpty()) {
             valid = false;
-            textInputLayoutEmail.setError("Please enter valid email!");
+            textInputLayoutUsername.setError("Please enter valid username!");
         } else {
-            valid = true;
-            textInputLayoutEmail.setError(null);
+            if (Username.length() > 5) {
+                valid = true;
+                textInputLayoutUsername.setError(null);
+            } else {
+                valid = false;
+                textInputLayoutUsername.setError("Username is too short!");
+            }
         }
 
         //Handling validation for Password field
@@ -129,13 +134,22 @@ public class RegisterActivity extends AppCompatActivity {
             valid = false;
             textInputLayoutPassword.setError("Please enter valid password!");
         } else {
-            if (Password.length() > 5) {
+            if (Password.length() == 6) {
                 valid = true;
                 textInputLayoutPassword.setError(null);
             } else {
                 valid = false;
-                textInputLayoutPassword.setError("Password is to short!");
+                textInputLayoutPassword.setError("Password length must be 6!");
             }
+
+            if (Password.matches("\\d+")) {
+                valid = true;
+                textInputLayoutPassword.setError(null);
+            } else {
+                valid = false;
+                textInputLayoutPassword.setError("Password must be numeric!");
+            }
+
         }
 
 
