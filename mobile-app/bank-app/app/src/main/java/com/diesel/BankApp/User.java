@@ -1,4 +1,4 @@
-package com.example.loginapp;
+package com.diesel.BankApp;
 
 
 public class User {

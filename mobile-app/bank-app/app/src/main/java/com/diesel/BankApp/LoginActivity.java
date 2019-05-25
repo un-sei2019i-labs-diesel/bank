@@ -1,4 +1,4 @@
-package com.example.loginapp;
+package com.diesel.BankApp;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -90,7 +90,7 @@ public class LoginActivity extends AppCompatActivity {
     private void initViews() {
         editTextUsername = (EditText) findViewById(R.id.editTextUsername);
         editTextPassword = (EditText) findViewById(R.id.editTextPassword);
-        textInputLayoutUsername = (TextInputLayout) findViewById(R.id.textInputLayoutUserName);
+        textInputLayoutUsername = (TextInputLayout) findViewById(R.id.textInputLayoutUsername);
         textInputLayoutPassword = (TextInputLayout) findViewById(R.id.textInputLayoutPassword);
         buttonLogin = (Button) findViewById(R.id.buttonLogin);
 
@@ -116,25 +116,44 @@ public class LoginActivity extends AppCompatActivity {
         String Username = editTextUsername.getText().toString();
         String Password = editTextPassword.getText().toString();
 
+        //Handling validation for Username field
+        if (Username.isEmpty()) {
+            valid = false;
+            textInputLayoutUsername.setError("Please enter valid username!");
+            return valid;
+        } else {
+            if (Username.length() > 5) {
+                valid = true;
+                textInputLayoutUsername.setError(null);
+            } else {
+                valid = false;
+                textInputLayoutUsername.setError("Username is too short!");
+                return valid;
+            }
+        }
+
         //Handling validation for Password field
         if (Password.isEmpty()) {
             valid = false;
             textInputLayoutPassword.setError("Please enter valid password!");
+            return valid;
         } else {
-            if (Password.length() == 6) {
-                valid = true;
-                textInputLayoutPassword.setError(null);
-            } else {
-                valid = false;
-                textInputLayoutPassword.setError("Password length must be 6!");
-            }
-
             if (Password.matches("\\d+")) {
                 valid = true;
                 textInputLayoutPassword.setError(null);
             } else {
                 valid = false;
                 textInputLayoutPassword.setError("Password must be numeric!");
+                return valid;
+            }
+
+            if (Password.length() == 6) {
+                valid = true;
+                textInputLayoutPassword.setError(null);
+            } else {
+                valid = false;
+                textInputLayoutPassword.setError("Password length must be 6!");
+                return valid;
             }
 
         }

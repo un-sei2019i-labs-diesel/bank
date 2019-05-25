@@ -1,4 +1,4 @@
-package com.example.loginapp;
+package com.diesel.BankApp;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;

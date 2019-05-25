@@ -1,4 +1,4 @@
-package com.example.loginapp;
+package com.diesel.BankApp;
 
 import android.content.ContentValues;
 import android.content.Context;
@@ -11,7 +11,7 @@ import java.util.Calendar;
 public class SqliteHelper extends SQLiteOpenHelper {
 
     //DATABASE NAME
-    public static final String DATABASE_NAME = "bank-app-db";
+    public static final String DATABASE_NAME = "BankAppDb";
 
     //DATABASE VERSION
     public static final int DATABASE_VERSION = 1;
@@ -88,22 +88,28 @@ public class SqliteHelper extends SQLiteOpenHelper {
         values.put(KEY_PASSWORD, user.password);
 
         //Put null account_number in  @values
-        values.put(KEY_PASSWORD, "NULL");
+        values.put(KEY_ACCOUNT_NUMBER, "NULL");
 
         // insert row
         long todo_id = db.insert(TABLE_USERS, null, values);
+
+        db.close();
     }
 
     public User Authenticate(User user) {
         SQLiteDatabase db = this.getReadableDatabase();
         Cursor cursor = db.rawQuery(
                 "SELECT * FROM " +  TABLE_USERS
-                        + " WHERE " + KEY_USER_NAME + " = " + user.userName, null);
+                        + " WHERE " + KEY_USER_NAME + " = '" + user.userName + "'", null);
 
         if (cursor != null && cursor.moveToFirst()&& cursor.getCount()>0) {
-            //if cursor has value then in user database there is user associated with this given username
-            User user1 = new User(cursor.getString(0), cursor.getString(1), cursor.getString(2), cursor.getString(3), cursor.getString(4));
 
+            //if cursor has value then in user database there is user associated with this given username
+            User user1 = new User(cursor.getString(cursor.getColumnIndex(KEY_ID)), cursor.getString(cursor.getColumnIndex(KEY_USER_NAME)),
+                                cursor.getString(cursor.getColumnIndex(KEY_CHANGE_DATE)),cursor.getString(cursor.getColumnIndex(KEY_PASSWORD)),cursor.getString(cursor.getColumnIndex(KEY_ACCOUNT_NUMBER)));
+
+            cursor.close();
+            db.close();
             //Match both passwords check they are same or not
             if (user.password.equalsIgnoreCase(user1.password)) {
                 return user1;
@@ -118,14 +124,15 @@ public class SqliteHelper extends SQLiteOpenHelper {
         SQLiteDatabase db = this.getReadableDatabase();
         Cursor cursor = db.rawQuery(
                 "SELECT * FROM " +  TABLE_USERS
-                        + " WHERE " + KEY_USER_NAME + " = " + Username
-                        + " OR " + KEY_ID + " = " + ID, null);
+                        + " WHERE " + KEY_USER_NAME + " = '" + Username
+                        + "' OR " + KEY_ID + " = " + ID, null);
 
         if (cursor != null && cursor.moveToFirst()&& cursor.getCount()>0) {
             //if cursor has value then in user database there is user associated with this given id or username so return true
             return true;
         }
-
+        cursor.close();
+        db.close();
         //if id and username does not exist return false
         return false;
     }

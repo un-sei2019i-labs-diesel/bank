@@ -1,4 +1,4 @@
-package com.example.loginapp;
+package com.diesel.BankApp;
 
 import android.os.Bundle;
 import android.os.Handler;
@@ -105,28 +105,33 @@ public class RegisterActivity extends AppCompatActivity {
         if (ID.isEmpty()) {
             valid = false;
             textInputLayoutID.setError("Please enter valid id!");
+            return valid;
         } else {
+            if (ID.matches("\\d+")) {
+                valid = true;
+                textInputLayoutID.setError(null);
+            } else {
+                valid = false;
+                textInputLayoutID.setError("ID must be numeric!");
+                return valid;
+            }
+
             if (ID.length() > 5) {
                 valid = true;
                 textInputLayoutID.setError(null);
             } else {
                 valid = false;
                 textInputLayoutID.setError("Id is too short!");
+                return valid;
             }
 
-            if (ID.matches("\\d+")) {
-                valid = true;
-                textInputLayoutPassword.setError(null);
-            } else {
-                valid = false;
-                textInputLayoutPassword.setError("ID must be numeric!");
-            }
         }
 
         //Handling validation for Username field
         if (Username.isEmpty()) {
             valid = false;
             textInputLayoutUsername.setError("Please enter valid username!");
+            return valid;
         } else {
             if (Username.length() > 5) {
                 valid = true;
@@ -134,6 +139,7 @@ public class RegisterActivity extends AppCompatActivity {
             } else {
                 valid = false;
                 textInputLayoutUsername.setError("Username is too short!");
+                return valid;
             }
         }
 
@@ -141,21 +147,24 @@ public class RegisterActivity extends AppCompatActivity {
         if (Password.isEmpty()) {
             valid = false;
             textInputLayoutPassword.setError("Please enter valid password!");
+            return valid;
         } else {
-            if (Password.length() == 6) {
-                valid = true;
-                textInputLayoutPassword.setError(null);
-            } else {
-                valid = false;
-                textInputLayoutPassword.setError("Password length must be 6!");
-            }
-
             if (Password.matches("\\d+")) {
                 valid = true;
                 textInputLayoutPassword.setError(null);
             } else {
                 valid = false;
                 textInputLayoutPassword.setError("Password must be numeric!");
+                return valid;
+            }
+
+            if (Password.length() == 6) {
+                valid = true;
+                textInputLayoutPassword.setError(null);
+            } else {
+                valid = false;
+                textInputLayoutPassword.setError("Password length must be 6!");
+                return valid;
             }
 
         }

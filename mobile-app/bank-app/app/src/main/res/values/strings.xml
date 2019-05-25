@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">LoginRegisterScreenDesign</string>
+    <string name="app_name">BankApp</string>
     <string name="create_account"><font color="#00ff00">text</font></string>
     <string name="username">Username</string>
     <string name="password">Password</string>
