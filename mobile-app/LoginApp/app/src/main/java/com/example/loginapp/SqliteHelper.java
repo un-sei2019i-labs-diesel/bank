@@ -6,6 +6,8 @@ import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
 
+import java.util.Calendar;
+
 public class SqliteHelper extends SQLiteOpenHelper {
 
     //DATABASE NAME
@@ -59,6 +61,9 @@ public class SqliteHelper extends SQLiteOpenHelper {
     public void onUpgrade(SQLiteDatabase sqLiteDatabase, int i, int i1) {
         //drop table to create new one if database version updated
         sqLiteDatabase.execSQL(" DROP TABLE IF EXISTS " + TABLE_USERS);
+
+        //Create Table again
+        sqLiteDatabase.execSQL(SQL_TABLE_USERS);
     }
 
     //using this method we can add users to user table
@@ -70,14 +75,20 @@ public class SqliteHelper extends SQLiteOpenHelper {
         //create content values to insert
         ContentValues values = new ContentValues();
 
+        //Put id in  @values
+        values.put(KEY_ID, user.id);
+
         //Put username in  @values
         values.put(KEY_USER_NAME, user.userName);
 
-        //Put email in  @values
-        values.put(KEY_EMAIL, user.email);
+        //Put current date in  @values
+        values.put(KEY_CHANGE_DATE, String.valueOf(Calendar.getInstance().getTime().getTime()));//valor en milisegundos desde January 1, 1970, 00:00:00 GMT
 
         //Put password in  @values
         values.put(KEY_PASSWORD, user.password);
+
+        //Put null account_number in  @values
+        values.put(KEY_PASSWORD, "NULL");
 
         // insert row
         long todo_id = db.insert(TABLE_USERS, null, values);
@@ -85,15 +96,13 @@ public class SqliteHelper extends SQLiteOpenHelper {
 
     public User Authenticate(User user) {
         SQLiteDatabase db = this.getReadableDatabase();
-        Cursor cursor = db.query(TABLE_USERS,// Selecting Table
-                new String[]{KEY_ID, KEY_USER_NAME, KEY_EMAIL, KEY_PASSWORD},//Selecting columns want to query
-                KEY_EMAIL + "=?",
-                new String[]{user.email},//Where clause
-                null, null, null);
+        Cursor cursor = db.rawQuery(
+                "SELECT * FROM " +  TABLE_USERS
+                        + " WHERE " + KEY_USER_NAME + " = " + user.userName, null);
 
         if (cursor != null && cursor.moveToFirst()&& cursor.getCount()>0) {
-            //if cursor has value then in user database there is user associated with this given email
-            User user1 = new User(cursor.getString(0), cursor.getString(1), cursor.getString(2), cursor.getString(3));
+            //if cursor has value then in user database there is user associated with this given username
+            User user1 = new User(cursor.getString(0), cursor.getString(1), cursor.getString(2), cursor.getString(3), cursor.getString(4));
 
             //Match both passwords check they are same or not
             if (user.password.equalsIgnoreCase(user1.password)) {

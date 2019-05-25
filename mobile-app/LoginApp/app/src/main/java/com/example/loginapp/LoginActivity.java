@@ -15,11 +15,11 @@ import android.widget.TextView;
 public class LoginActivity extends AppCompatActivity {
 
     //Declaration EditTexts
-    EditText editTextEmail;
+    EditText editTextUsername;
     EditText editTextPassword;
 
     //Declaration TextInputLayout
-    TextInputLayout textInputLayoutEmail;
+    TextInputLayout textInputLayoutUsername;
     TextInputLayout textInputLayoutPassword;
 
     //Declaration Button
@@ -45,11 +45,11 @@ public class LoginActivity extends AppCompatActivity {
                 if (validate()) {
 
                     //Get values from EditText fields
-                    String Email = editTextEmail.getText().toString();
+                    String Username = editTextUsername.getText().toString();
                     String Password = editTextPassword.getText().toString();
 
                     //Authenticate user
-                    User currentUser = sqliteHelper.Authenticate(new User(null, null, Email, Password));
+                    User currentUser = sqliteHelper.Authenticate(new User("null",Username,"null",Password,"null"));
 
                     //Check Authentication is successful or not
                     if (currentUser != null) {
@@ -76,7 +76,7 @@ public class LoginActivity extends AppCompatActivity {
     // for TextView yet not supported in Xml so i have done it programmatically)
     private void initCreateAccountTextView() {
         TextView textViewCreateAccount = (TextView) findViewById(R.id.textViewCreateAccount);
-        textViewCreateAccount.setText(fromHtml("<font color='#ffffff'>I don't have account yet. </font><font color='#0c0099'>create one</font>"));
+        textViewCreateAccount.setText(fromHtml("</font><font color='#0c0099'>create account</font>"));
         textViewCreateAccount.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
