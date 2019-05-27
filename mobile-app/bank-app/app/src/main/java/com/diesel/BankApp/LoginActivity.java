@@ -49,7 +49,12 @@ public class LoginActivity extends AppCompatActivity {
                     String Password = editTextPassword.getText().toString();
 
                     //Authenticate user
-                    User currentUser = sqliteHelper.Authenticate(new User("null",Username,"null",Password,"null"));
+                    User currentUser = null;
+                    try {
+                        currentUser = sqliteHelper.Authenticate(new User("null",Username,"null",Password,"null"));
+                    } catch (Exception e) {
+                        e.printStackTrace();
+                    }
 
                     //Check Authentication is successful or not
                     if (currentUser != null) {
