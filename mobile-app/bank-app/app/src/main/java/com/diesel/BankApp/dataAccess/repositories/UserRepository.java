@@ -5,32 +5,29 @@ import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
 
 import com.diesel.BankApp.dataAccess.database.Database;
-import com.diesel.BankApp.dataAccess.models.Account;
+import com.diesel.BankApp.dataAccess.models.User;
 import com.j256.ormlite.android.apptools.OpenHelperManager;
 import com.j256.ormlite.dao.RuntimeExceptionDao;
 
 import java.util.List;
 
-public class AccountRepository extends AppCompatActivity {
+public class UserRepository extends AppCompatActivity {
 
     Database dbHelper;
 
-    public void create(Account account,Context context){
+    public void create(User user, Context context){
         dbHelper = OpenHelperManager.getHelper(context, Database.class);
 
-        RuntimeExceptionDao<Account, Integer> noteDao =  dbHelper.getNoteRuntimeExceptionDao();
+        RuntimeExceptionDao<User,Integer> UserDao = dbHelper.getUserRuntimeExceptionDao();
 
-        //create
-        noteDao.create(account);
-
-        //update
-        //noteDao.update(account);
+            //create
+        UserDao.create(user);
 
 
 
         //query
-        List<Account> acc = noteDao.queryForAll();
-        Log.d("demo", acc.toString());
+        List<User> users = UserDao.queryForAll();
+        Log.d("demo user", users.toString());
 
         OpenHelperManager.releaseHelper();
     }

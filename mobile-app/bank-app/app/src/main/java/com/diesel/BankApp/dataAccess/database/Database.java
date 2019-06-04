@@ -30,7 +30,9 @@ public class Database extends OrmLiteSqliteOpenHelper {
     private String clave = "Diesel";
 
     private Dao<Account, Integer> accDao = null;
+    private Dao<User,Integer> userDao = null;
     private RuntimeExceptionDao<Account, Integer> accRuntimeDao = null;
+    private RuntimeExceptionDao<User, Integer> userRuntimeDao = null;
 
     private static final String DATABASE_NAME = "BankAppDb.db";
     private static final int DATABASE_VERSION = 1;
@@ -45,6 +47,7 @@ public class Database extends OrmLiteSqliteOpenHelper {
     public void onCreate(SQLiteDatabase database, ConnectionSource connectionSource) {
         try {
             TableUtils.createTable(connectionSource, Account.class);
+            TableUtils.createTable(connectionSource,User.class);
         } catch (SQLException e) {
             e.printStackTrace();
         }
@@ -54,7 +57,9 @@ public class Database extends OrmLiteSqliteOpenHelper {
     public void onUpgrade(SQLiteDatabase database, ConnectionSource connectionSource, int oldVersion, int newVersion) {
         try {
             TableUtils.dropTable(connectionSource,Account.class,true);
+            TableUtils.dropTable(connectionSource,User.class,true);
             onCreate(database, connectionSource);
+
         } catch (SQLException e) {
             e.printStackTrace();
         }
@@ -68,6 +73,14 @@ public class Database extends OrmLiteSqliteOpenHelper {
 
         return accDao;
     }
+    public Dao<User, Integer> getUserDao() throws SQLException {
+
+        if(userDao == null){
+            userDao = getDao(User.class);
+        }
+
+        return userDao;
+    }
 
 
     public RuntimeExceptionDao<Account, Integer> getNoteRuntimeExceptionDao(){
@@ -75,6 +88,12 @@ public class Database extends OrmLiteSqliteOpenHelper {
             accRuntimeDao = getRuntimeExceptionDao(Account.class);
         }
         return accRuntimeDao;
+    }
+    public RuntimeExceptionDao<User, Integer> getUserRuntimeExceptionDao(){
+        if(userRuntimeDao == null){
+            userRuntimeDao = getRuntimeExceptionDao(User.class);
+        }
+        return userRuntimeDao;
     }
 /*
     //using this method we can add users to user table

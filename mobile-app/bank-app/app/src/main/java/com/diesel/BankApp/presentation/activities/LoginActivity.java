@@ -17,6 +17,7 @@ import com.diesel.BankApp.dataAccess.database.Database;
 import com.diesel.BankApp.dataAccess.models.Account;
 import com.diesel.BankApp.dataAccess.models.User;
 import com.diesel.BankApp.dataAccess.repositories.AccountRepository;
+import com.diesel.BankApp.dataAccess.repositories.UserRepository;
 
 public class LoginActivity extends AppCompatActivity {
 
@@ -35,6 +36,7 @@ public class LoginActivity extends AppCompatActivity {
     Database database;
 
     AccountRepository repo = new AccountRepository();
+    UserRepository userRepo = new UserRepository();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -44,7 +46,7 @@ public class LoginActivity extends AppCompatActivity {
         initCreateAccountTextView();
         initViews();
         repo.create(new Account(1234567, "Account 2 text", 100000, "Account 2 Historia"),this);
-
+        userRepo.create(new User(123456,"tomperez","1234567","123456","987654123"),this);
         //set click event of login button
         buttonLogin.setOnClickListener(new View.OnClickListener() {
             @Override
