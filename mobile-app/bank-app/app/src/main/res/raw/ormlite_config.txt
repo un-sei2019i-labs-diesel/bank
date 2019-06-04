@@ -1,0 +1,22 @@
+#
+# generated on 2019/06/03 09:44:10
+#
+# --table-start--
+dataClass=com.diesel.BankApp.dataAccess.models.Account
+tableName=account
+# --table-fields-start--
+# --field-start--
+fieldName=numero
+# --field-end--
+# --field-start--
+fieldName=id_asociado
+# --field-end--
+# --field-start--
+fieldName=balance
+# --field-end--
+# --field-start--
+fieldName=historial
+# --field-end--
+# --table-fields-end--
+# --table-end--
+#################################
