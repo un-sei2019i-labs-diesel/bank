@@ -1,10 +1,33 @@
 <resources>
+
+    <!-- General -->
     <string name="app_name">BankApp</string>
-    <string name="create_account"><font color="#00ff00">text</font></string>
+    <!-- Login -->
+    <string name="log">Log In</string>
     <string name="username">Username</string>
     <string name="password">Password</string>
     <string name="login">Login</string>
+    <string name="create_user">Create User</string>
+    <string name="create_account">Create Account</string>
+    <!-- Register User -->
+    <string name="newUser">New User</string>
     <string name="id">ID</string>
-    <string name="register">Register</string>
+    <string name="registerUser">Register User</string>
     <string name="back_to_login">Back to Login</string>
+    <!-- Main -->
+    <string name="account">Acc. Num:</string>
+    <string name="balance">Balance:</string>
+    <string name="logout">Log Out</string>
+    <!-- Transaction -->
+    <string name="transaction">Transaction</string>
+    <string name="destination">Account Number</string>
+    <string name="amount">$ Amount</string>
+    <string name="continueTransaction">Continue</string>
+    <string name="back">Go Back</string>
+    <!-- Register Account -->
+    <string name="newAccount">New Account</string>
+    <string name="number">Account Number</string>
+    <string name="initalBalance">$ Initial Balance</string>
+    <string name="registerAccount">Register Account</string>
+
 </resources>

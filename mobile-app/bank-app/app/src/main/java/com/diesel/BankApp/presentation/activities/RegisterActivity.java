@@ -1,7 +1,6 @@
 package com.diesel.BankApp.presentation.activities;
 
 import android.os.Bundle;
-import android.os.Handler;
 import android.support.annotation.Nullable;
 import android.support.design.widget.Snackbar;
 import android.support.design.widget.TextInputLayout;
@@ -11,16 +10,8 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
 
-import android.util.Base64;
-
 import com.diesel.BankApp.R;
-import com.diesel.BankApp.dataAccess.database.Database;
-import com.diesel.BankApp.dataAccess.models.User;
 
-import java.security.MessageDigest;
-
-import javax.crypto.Cipher;
-import javax.crypto.spec.SecretKeySpec;
 
 
 public class RegisterActivity extends AppCompatActivity {
@@ -38,79 +29,34 @@ public class RegisterActivity extends AppCompatActivity {
     //Declaration Button
     Button buttonRegister;
 
-    //Declaration Database
-    Database database;
-
-    //Declarando String
-    private String textoSalida;
-    private String clave = "Diesel";
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_register);
-        database = new Database(this);
         initTextViewLogin();
         initViews();
         buttonRegister.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 if (validate()) {
-                    String ID = editTextID.getText().toString();
+                    int ID = Integer.parseInt(editTextID.getText().toString());
                     String Username = editTextUsername.getText().toString();
                     String Password = editTextPassword.getText().toString();
 
-                    //Check in the database is there any user associated with  this id, username
-                    /*if (!database.doesExist(ID, Username)) {
+                    //Register logic
 
-                        //Si no existe
-                        try{
-                            textoSalida = encriptar(Password, clave);
-                        } catch(Exception e) {
-                            e.printStackTrace();
-                        }
-
-                        //does not exist now add new user to database
-                        database.addUser(new User(ID, Username, "null", textoSalida, "null"));
-                        Snackbar.make(buttonRegister, "User created successfully! Please Login ", Snackbar.LENGTH_LONG).show();
-                        new Handler().postDelayed(new Runnable() {
-                            @Override
-                            public void run() {
-                                finish();
-                            }
-                        }, Snackbar.LENGTH_LONG);
-                    }else {
-
-                        //Email exists with email input provided so show error user already exist
-                        Snackbar.make(buttonRegister, "User already exists with same id or username ", Snackbar.LENGTH_LONG).show();
-                    }*/
-
+                    Snackbar.make(buttonRegister, "User created successfully! Please Login ", Snackbar.LENGTH_LONG).show();
 
                 }
             }
         });
     }
 
-    private String encriptar(String datos, String password) throws Exception{
-        SecretKeySpec secretKey = generateKey(password);
-        Cipher cipher = Cipher.getInstance("AES");
-        cipher.init(Cipher.ENCRYPT_MODE,secretKey);
-        byte[] datosEncriptadosBytes = cipher.doFinal(datos.getBytes());
-        String datosEncriptadosString = Base64.encodeToString(datosEncriptadosBytes, Base64.DEFAULT);
-        return datosEncriptadosString;
-    }
-
-    private SecretKeySpec generateKey(String password) throws Exception{
-        MessageDigest sha = MessageDigest.getInstance("SHA-256");
-        byte[] key = password.getBytes("UTF-8");
-        key = sha.digest(key);
-        SecretKeySpec secretKey = new SecretKeySpec(key, "AES");
-        return secretKey;
-    }
 
     //this method used to set Login TextView click event
     private void initTextViewLogin() {
-        TextView textViewLogin = (TextView) findViewById(R.id.textViewLogin);
+        TextView textViewLogin = findViewById(R.id.textViewLogin);
         textViewLogin.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -121,13 +67,13 @@ public class RegisterActivity extends AppCompatActivity {
 
     //this method is used to connect XML views to its Objects
     private void initViews() {
-        editTextUsername = (EditText) findViewById(R.id.editTextUsername);
-        editTextPassword = (EditText) findViewById(R.id.editTextPassword);
-        editTextID = (EditText) findViewById(R.id.editTextID);
-        textInputLayoutUsername = (TextInputLayout) findViewById(R.id.textInputLayoutUsername);
-        textInputLayoutPassword = (TextInputLayout) findViewById(R.id.textInputLayoutPassword);
-        textInputLayoutID = (TextInputLayout) findViewById(R.id.textInputLayoutID);
-        buttonRegister = (Button) findViewById(R.id.buttonRegister);
+        editTextUsername = findViewById(R.id.editTextUsername);
+        editTextPassword = findViewById(R.id.editTextPassword);
+        editTextID = findViewById(R.id.editTextID);
+        textInputLayoutUsername = findViewById(R.id.textInputLayoutUsername);
+        textInputLayoutPassword = findViewById(R.id.textInputLayoutPassword);
+        textInputLayoutID = findViewById(R.id.textInputLayoutID);
+        buttonRegister = findViewById(R.id.buttonRegister);
 
     }
 

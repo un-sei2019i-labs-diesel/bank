@@ -22,6 +22,16 @@
             android:layout_margin="16dp"
             android:src="@drawable/logo" />
 
+        <TextView
+            android:id="@+id/userRegisterTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="70dp"
+            android:layout_gravity="center_horizontal"
+            android:text="@string/newUser"
+            android:textColor="@color/colorPrimaryDark"
+            android:textSize="45sp"
+            android:textStyle="bold" />
+
         <android.support.design.widget.TextInputLayout
             app:errorEnabled="true"
             android:id="@+id/textInputLayoutID"
@@ -34,7 +44,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:hint="@string/id"
-                android:inputType="textPersonName" />
+                android:inputType="number" />
         </android.support.design.widget.TextInputLayout>
 
         <android.support.design.widget.TextInputLayout
@@ -49,7 +59,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:hint="@string/username"
-                android:inputType="textEmailAddress" />
+                android:inputType="text" />
         </android.support.design.widget.TextInputLayout>
 
         <android.support.design.widget.TextInputLayout
@@ -66,7 +76,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:hint="@string/password"
-                android:inputType="textPassword" />
+                android:inputType="numberPassword" />
         </android.support.design.widget.TextInputLayout>
 
         <Button
@@ -78,7 +88,7 @@
             android:layout_marginTop="16dp"
             android:layout_weight="1"
             android:background="@color/colorAccent"
-            android:text="@string/register" />
+            android:text="@string/registerUser" />
 
         <TextView
             android:id="@+id/textViewLogin"

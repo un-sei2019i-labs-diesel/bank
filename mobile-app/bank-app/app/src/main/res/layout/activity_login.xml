@@ -21,6 +21,16 @@
             android:layout_margin="16dp"
             android:src="@drawable/logo" />
 
+        <TextView
+            android:id="@+id/logInTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="70dp"
+            android:layout_gravity="center_horizontal"
+            android:text="@string/log"
+            android:textColor="@color/colorPrimaryDark"
+            android:textSize="45sp"
+            android:textStyle="bold" />
+
         <android.support.design.widget.TextInputLayout
             android:id="@+id/textInputLayoutUsername"
             android:layout_width="match_parent"
@@ -33,7 +43,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:hint="@string/username"
-                android:inputType="textEmailAddress" />
+                android:inputType="text" />
         </android.support.design.widget.TextInputLayout>
 
         <android.support.design.widget.TextInputLayout
@@ -50,7 +60,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:hint="@string/password"
-                android:inputType="textPassword" />
+                android:inputType="numberPassword" />
         </android.support.design.widget.TextInputLayout>
 
         <Button
@@ -64,12 +74,23 @@
             android:textColor="@android:color/white" />
 
         <TextView
+            android:id="@+id/textViewCreateUser"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:layout_marginBottom="16dp"
+            android:gravity="center_horizontal"
+            android:text="@string/create_user"
+            android:textColor="@color/colorAccent" />
+
+        <TextView
             android:id="@+id/textViewCreateAccount"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginBottom="16dp"
             android:layout_marginTop="16dp"
             android:gravity="center_horizontal"
+            android:text="@string/create_account"
             android:textColor="@color/colorAccent"/>
     </LinearLayout>
 </ScrollView>

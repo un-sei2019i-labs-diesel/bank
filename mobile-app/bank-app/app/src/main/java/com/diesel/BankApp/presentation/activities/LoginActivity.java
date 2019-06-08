@@ -5,19 +5,13 @@ import android.os.Bundle;
 import android.support.design.widget.Snackbar;
 import android.support.design.widget.TextInputLayout;
 import android.support.v7.app.AppCompatActivity;
-import android.text.Html;
-import android.text.Spanned;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
 
 import com.diesel.BankApp.R;
-import com.diesel.BankApp.dataAccess.database.Database;
-import com.diesel.BankApp.dataAccess.models.Account;
 import com.diesel.BankApp.dataAccess.models.User;
-import com.diesel.BankApp.dataAccess.repositories.AccountRepository;
-import com.diesel.BankApp.dataAccess.repositories.UserRepository;
 
 public class LoginActivity extends AppCompatActivity {
 
@@ -32,21 +26,14 @@ public class LoginActivity extends AppCompatActivity {
     //Declaration Button
     Button buttonLogin;
 
-    //Declaration Database
-    Database database;
-
-    AccountRepository repo = new AccountRepository();
-    UserRepository userRepo = new UserRepository();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
-        database = new Database(this);
+        initCreateUserTextView();
         initCreateAccountTextView();
         initViews();
-        repo.create(new Account(1234567, "Account 2 text", 100000, "Account 2 Historia"),this);
-        userRepo.create(new User(123456,"tomperez","1234567","123456","987654123"),this);
         //set click event of login button
         buttonLogin.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -64,19 +51,20 @@ public class LoginActivity extends AppCompatActivity {
                     //Authenticate user
                     User currentUser = null;
                     try {
-                        //currentUser = database.Authenticate(new User("null",Username,"null",Password,"null"));
+                        //log in logic
+
                     } catch (Exception e) {
                         e.printStackTrace();
                     }
 
                     //Check Authentication is successful or not
-                    if (currentUser != null) {
+                    if (/*success logic*/) {
                         Snackbar.make(buttonLogin, "Successfully Logged in!", Snackbar.LENGTH_LONG).show();
 
                         //User Logged in Successfully Launch You home screen activity
-                       /* Intent intent=new Intent(LoginActivity.this,HomeScreenActivity.class);
+                        Intent intent = new Intent(LoginActivity.this, MainActivity.class);
                         startActivity(intent);
-                        finish();*/
+                        finish();
                     } else {
 
                         //User Logged in Failed
@@ -92,11 +80,10 @@ public class LoginActivity extends AppCompatActivity {
 
 
     //this method used to set Create account TextView text and click event( maltipal colors
-    // for TextView yet not supported in Xml so i have done it programmatically)
-    private void initCreateAccountTextView() {
-        TextView textViewCreateAccount = (TextView) findViewById(R.id.textViewCreateAccount);
-        textViewCreateAccount.setText(fromHtml("</font><font color='#0c0099'>create account</font>"));
-        textViewCreateAccount.setOnClickListener(new View.OnClickListener() {
+    // for TextView yet not supported in Xmld so i have one it programmatically)
+    private void initCreateUserTextView() {
+        TextView textViewCreateUser = findViewById(R.id.textViewCreateUser);
+        textViewCreateUser.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 Intent intent = new Intent(LoginActivity.this, RegisterActivity.class);
@@ -105,27 +92,27 @@ public class LoginActivity extends AppCompatActivity {
         });
     }
 
+    private void initCreateAccountTextView() {
+        TextView textViewCreateAccount = findViewById(R.id.textViewCreateAccount);
+        textViewCreateAccount.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(LoginActivity.this, AccountRegisterActivity.class);
+                startActivity(intent);
+            }
+        });
+    }
+
     //this method is used to connect XML views to its Objects
     private void initViews() {
-        editTextUsername = (EditText) findViewById(R.id.editTextUsername);
-        editTextPassword = (EditText) findViewById(R.id.editTextPassword);
-        textInputLayoutUsername = (TextInputLayout) findViewById(R.id.textInputLayoutUsername);
-        textInputLayoutPassword = (TextInputLayout) findViewById(R.id.textInputLayoutPassword);
-        buttonLogin = (Button) findViewById(R.id.buttonLogin);
+        editTextUsername = findViewById(R.id.editTextUsername);
+        editTextPassword = findViewById(R.id.editTextPassword);
+        textInputLayoutUsername = findViewById(R.id.textInputLayoutUsername);
+        textInputLayoutPassword = findViewById(R.id.textInputLayoutPassword);
+        buttonLogin = findViewById(R.id.buttonLogin);
 
     }
 
-    //This method is for handling fromHtml method deprecation
-    @SuppressWarnings("deprecation")
-    public static Spanned fromHtml(String html) {
-        Spanned result;
-        if (android.os.Build.VERSION.SDK_INT >= android.os.Build.VERSION_CODES.N) {
-            result = Html.fromHtml(html, Html.FROM_HTML_MODE_LEGACY);
-        } else {
-            result = Html.fromHtml(html);
-        }
-        return result;
-    }
 
     //This method is used to validate input given by user
     public boolean validate() {
