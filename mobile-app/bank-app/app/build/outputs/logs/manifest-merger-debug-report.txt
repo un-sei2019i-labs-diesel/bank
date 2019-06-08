@@ -1,0 +1,180 @@
+-- Merging decision tree log ---
+manifest
+ADDED from C:\Users\Felipe Pieschacon\bank\mobile-app\bank-app\app\src\main\AndroidManifest.xml:2:1-29:12
+INJECTED from C:\Users\Felipe Pieschacon\bank\mobile-app\bank-app\app\src\main\AndroidManifest.xml:2:1-29:12
+INJECTED from C:\Users\Felipe Pieschacon\bank\mobile-app\bank-app\app\src\main\AndroidManifest.xml:2:1-29:12
+INJECTED from C:\Users\Felipe Pieschacon\bank\mobile-app\bank-app\app\src\main\AndroidManifest.xml:2:1-29:12
+MERGED from [com.android.support:design:28.0.0] C:\Users\Felipe Pieschacon\.gradle\caches\transforms-2\files-2.1\b4946e7ee174dd1c7970d3da607d3e4c\AndroidManifest.xml:17:1-24:12
+MERGED from [com.android.support:appcompat-v7:28.0.0] C:\Users\Felipe Pieschacon\.gradle\caches\transforms-2\files-2.1\8b6fac6ee46d77d47ffc5490d9ae994d\AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support.constraint:constraint-layout:1.1.3] C:\Users\Felipe Pieschacon\.gradle\caches\transforms-2\files-2.1\c2243a6ede911e5d84c9e2a62ec571fd\AndroidManifest.xml:2:1-11:12
+MERGED from [com.android.support:support-fragment:28.0.0] C:\Users\Felipe Pieschacon\.gradle\caches\transforms-2\files-2.1\d5d48b5be636de40e6d69a7844d6d346\AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:animated-vector-drawable:28.0.0] C:\Users\Felipe Pieschacon\.gradle\caches\transforms-2\files-2.1\510413e9e0f7af2cd4bf0c9db5861f4f\AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:recyclerview-v7:28.0.0] C:\Users\Felipe Pieschacon\.gradle\caches\transforms-2\files-2.1\d401b4b14bf28574dd59e4d8f097a2c4\AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:support-core-ui:28.0.0] C:\Users\Felipe Pieschacon\.gradle\caches\transforms-2\files-2.1\227af0c2b6341e04ad7e1be514914245\AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:support-core-utils:28.0.0] C:\Users\Felipe Pieschacon\.gradle\caches\transforms-2\files-2.1\ac315e4e2845a0a7a3da7606dc004a05\AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:support-vector-drawable:28.0.0] C:\Users\Felipe Pieschacon\.gradle\caches\transforms-2\files-2.1\10d750fe5c88fd33eb57ef2aa22667a4\AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:transition:28.0.0] C:\Users\Felipe Pieschacon\.gradle\caches\transforms-2\files-2.1\ac8bfd6abdad8d7f5715656d4d7f3068\AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:loader:28.0.0] C:\Users\Felipe Pieschacon\.gradle\caches\transforms-2\files-2.1\68cb158901f00ad25763fbfb454d934e\AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:viewpager:28.0.0] C:\Users\Felipe Pieschacon\.gradle\caches\transforms-2\files-2.1\b87eb7798c7970a111a236b352391d88\AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:coordinatorlayout:28.0.0] C:\Users\Felipe Pieschacon\.gradle\caches\transforms-2\files-2.1\503b0c649459b0b8fc7fe491f66cc387\AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:drawerlayout:28.0.0] C:\Users\Felipe Pieschacon\.gradle\caches\transforms-2\files-2.1\6d6d32c6c9c2ac713eaf2851bff646af\AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:slidingpanelayout:28.0.0] C:\Users\Felipe Pieschacon\.gradle\caches\transforms-2\files-2.1\60180aeaeda1466aa58d91125a9adfe9\AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:customview:28.0.0] C:\Users\Felipe Pieschacon\.gradle\caches\transforms-2\files-2.1\5c4e3c578a62b282fd88bb44ae2352c7\AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:swiperefreshlayout:28.0.0] C:\Users\Felipe Pieschacon\.gradle\caches\transforms-2\files-2.1\3dd13886565fd20233661de75a9f9754\AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:asynclayoutinflater:28.0.0] C:\Users\Felipe Pieschacon\.gradle\caches\transforms-2\files-2.1\686c3f8a36605ad96fc7233f78369d1e\AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:support-compat:28.0.0] C:\Users\Felipe Pieschacon\.gradle\caches\transforms-2\files-2.1\5ec69a2c5bd5cb39b820360ca67a7cf7\AndroidManifest.xml:17:1-24:12
+MERGED from [com.android.support:versionedparcelable:28.0.0] C:\Users\Felipe Pieschacon\.gradle\caches\transforms-2\files-2.1\704158c6fbec266f306cc9a126326cb4\AndroidManifest.xml:17:1-25:12
+MERGED from [com.android.support:cursoradapter:28.0.0] C:\Users\Felipe Pieschacon\.gradle\caches\transforms-2\files-2.1\6173d151b1c7f6e7f24ce02c36f5acfe\AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:cardview-v7:28.0.0] C:\Users\Felipe Pieschacon\.gradle\caches\transforms-2\files-2.1\5fe1fcecfb625d347c8e1bea9ebf47a6\AndroidManifest.xml:17:1-22:12
+MERGED from [android.arch.lifecycle:runtime:1.1.1] C:\Users\Felipe Pieschacon\.gradle\caches\transforms-2\files-2.1\1cc857182dc9abea94f11b1ec198c56d\AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:documentfile:28.0.0] C:\Users\Felipe Pieschacon\.gradle\caches\transforms-2\files-2.1\caf8484f1287909227bb6654d50e9bab\AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:localbroadcastmanager:28.0.0] C:\Users\Felipe Pieschacon\.gradle\caches\transforms-2\files-2.1\8f5ec6ecfb12b688a30e1b962d722ad2\AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:print:28.0.0] C:\Users\Felipe Pieschacon\.gradle\caches\transforms-2\files-2.1\ecef2ec0fde322f800dc127eb711f929\AndroidManifest.xml:17:1-22:12
+MERGED from [android.arch.lifecycle:viewmodel:1.1.1] C:\Users\Felipe Pieschacon\.gradle\caches\transforms-2\files-2.1\e1675c57bbec799d4c6f6f57407092ee\AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:interpolator:28.0.0] C:\Users\Felipe Pieschacon\.gradle\caches\transforms-2\files-2.1\c8222bc11d59586a91a2c8150bdef5c0\AndroidManifest.xml:17:1-22:12
+MERGED from [android.arch.lifecycle:livedata:1.1.1] C:\Users\Felipe Pieschacon\.gradle\caches\transforms-2\files-2.1\d748fc603c78a7272c694ef3b46da06e\AndroidManifest.xml:17:1-22:12
+MERGED from [android.arch.lifecycle:livedata-core:1.1.1] C:\Users\Felipe Pieschacon\.gradle\caches\transforms-2\files-2.1\85ce544e0ba6ff8c7ff0e850b7576bf8\AndroidManifest.xml:17:1-22:12
+MERGED from [android.arch.core:runtime:1.1.1] C:\Users\Felipe Pieschacon\.gradle\caches\transforms-2\files-2.1\74a83b7fa7c9ef718a9f61e573e4aaeb\AndroidManifest.xml:17:1-22:12
+INJECTED from C:\Users\Felipe Pieschacon\bank\mobile-app\bank-app\app\src\main\AndroidManifest.xml:2:1-29:12
+INJECTED from C:\Users\Felipe Pieschacon\bank\mobile-app\bank-app\app\src\main\AndroidManifest.xml:2:1-29:12
+INJECTED from C:\Users\Felipe Pieschacon\bank\mobile-app\bank-app\app\src\main\AndroidManifest.xml:2:1-29:12
+	package
+		ADDED from C:\Users\Felipe Pieschacon\bank\mobile-app\bank-app\app\src\main\AndroidManifest.xml:3:5-33
+		INJECTED from C:\Users\Felipe Pieschacon\bank\mobile-app\bank-app\app\src\main\AndroidManifest.xml
+		INJECTED from C:\Users\Felipe Pieschacon\bank\mobile-app\bank-app\app\src\main\AndroidManifest.xml
+	android:versionName
+		INJECTED from C:\Users\Felipe Pieschacon\bank\mobile-app\bank-app\app\src\main\AndroidManifest.xml
+		ADDED from C:\Users\Felipe Pieschacon\bank\mobile-app\bank-app\app\src\main\AndroidManifest.xml:2:1-29:12
+		INJECTED from C:\Users\Felipe Pieschacon\bank\mobile-app\bank-app\app\src\main\AndroidManifest.xml
+	android:versionCode
+		INJECTED from C:\Users\Felipe Pieschacon\bank\mobile-app\bank-app\app\src\main\AndroidManifest.xml
+		ADDED from C:\Users\Felipe Pieschacon\bank\mobile-app\bank-app\app\src\main\AndroidManifest.xml:2:1-29:12
+		INJECTED from C:\Users\Felipe Pieschacon\bank\mobile-app\bank-app\app\src\main\AndroidManifest.xml
+	xmlns:android
+		ADDED from C:\Users\Felipe Pieschacon\bank\mobile-app\bank-app\app\src\main\AndroidManifest.xml:2:11-69
+application
+ADDED from C:\Users\Felipe Pieschacon\bank\mobile-app\bank-app\app\src\main\AndroidManifest.xml:5:5-27:19
+MERGED from [com.android.support:design:28.0.0] C:\Users\Felipe Pieschacon\.gradle\caches\transforms-2\files-2.1\b4946e7ee174dd1c7970d3da607d3e4c\AndroidManifest.xml:22:5-20
+MERGED from [com.android.support:design:28.0.0] C:\Users\Felipe Pieschacon\.gradle\caches\transforms-2\files-2.1\b4946e7ee174dd1c7970d3da607d3e4c\AndroidManifest.xml:22:5-20
+MERGED from [com.android.support.constraint:constraint-layout:1.1.3] C:\Users\Felipe Pieschacon\.gradle\caches\transforms-2\files-2.1\c2243a6ede911e5d84c9e2a62ec571fd\AndroidManifest.xml:9:5-20
+MERGED from [com.android.support.constraint:constraint-layout:1.1.3] C:\Users\Felipe Pieschacon\.gradle\caches\transforms-2\files-2.1\c2243a6ede911e5d84c9e2a62ec571fd\AndroidManifest.xml:9:5-20
+MERGED from [com.android.support:support-compat:28.0.0] C:\Users\Felipe Pieschacon\.gradle\caches\transforms-2\files-2.1\5ec69a2c5bd5cb39b820360ca67a7cf7\AndroidManifest.xml:22:5-94
+MERGED from [com.android.support:support-compat:28.0.0] C:\Users\Felipe Pieschacon\.gradle\caches\transforms-2\files-2.1\5ec69a2c5bd5cb39b820360ca67a7cf7\AndroidManifest.xml:22:5-94
+MERGED from [com.android.support:versionedparcelable:28.0.0] C:\Users\Felipe Pieschacon\.gradle\caches\transforms-2\files-2.1\704158c6fbec266f306cc9a126326cb4\AndroidManifest.xml:22:5-23:19
+MERGED from [com.android.support:versionedparcelable:28.0.0] C:\Users\Felipe Pieschacon\.gradle\caches\transforms-2\files-2.1\704158c6fbec266f306cc9a126326cb4\AndroidManifest.xml:22:5-23:19
+	android:appComponentFactory
+		ADDED from [com.android.support:support-compat:28.0.0] C:\Users\Felipe Pieschacon\.gradle\caches\transforms-2\files-2.1\5ec69a2c5bd5cb39b820360ca67a7cf7\AndroidManifest.xml:22:18-91
+	android:supportsRtl
+		ADDED from C:\Users\Felipe Pieschacon\bank\mobile-app\bank-app\app\src\main\AndroidManifest.xml:10:9-35
+	android:label
+		ADDED from C:\Users\Felipe Pieschacon\bank\mobile-app\bank-app\app\src\main\AndroidManifest.xml:8:9-41
+	android:roundIcon
+		ADDED from C:\Users\Felipe Pieschacon\bank\mobile-app\bank-app\app\src\main\AndroidManifest.xml:9:9-47
+	android:icon
+		ADDED from C:\Users\Felipe Pieschacon\bank\mobile-app\bank-app\app\src\main\AndroidManifest.xml:7:9-36
+	android:allowBackup
+		ADDED from C:\Users\Felipe Pieschacon\bank\mobile-app\bank-app\app\src\main\AndroidManifest.xml:6:9-35
+	android:theme
+		ADDED from C:\Users\Felipe Pieschacon\bank\mobile-app\bank-app\app\src\main\AndroidManifest.xml:11:9-40
+activity#com.diesel.BankApp.LoginActivity
+ADDED from C:\Users\Felipe Pieschacon\bank\mobile-app\bank-app\app\src\main\AndroidManifest.xml:12:9-21:20
+	android:label
+		ADDED from C:\Users\Felipe Pieschacon\bank\mobile-app\bank-app\app\src\main\AndroidManifest.xml:14:13-45
+	android:theme
+		ADDED from C:\Users\Felipe Pieschacon\bank\mobile-app\bank-app\app\src\main\AndroidManifest.xml:15:13-56
+	android:name
+		ADDED from C:\Users\Felipe Pieschacon\bank\mobile-app\bank-app\app\src\main\AndroidManifest.xml:13:13-60
+intent-filter#action:name:android.intent.action.MAIN+category:name:android.intent.category.LAUNCHER
+ADDED from C:\Users\Felipe Pieschacon\bank\mobile-app\bank-app\app\src\main\AndroidManifest.xml:16:13-20:29
+action#android.intent.action.MAIN
+ADDED from C:\Users\Felipe Pieschacon\bank\mobile-app\bank-app\app\src\main\AndroidManifest.xml:17:17-69
+	android:name
+		ADDED from C:\Users\Felipe Pieschacon\bank\mobile-app\bank-app\app\src\main\AndroidManifest.xml:17:25-66
+category#android.intent.category.LAUNCHER
+ADDED from C:\Users\Felipe Pieschacon\bank\mobile-app\bank-app\app\src\main\AndroidManifest.xml:19:17-77
+	android:name
+		ADDED from C:\Users\Felipe Pieschacon\bank\mobile-app\bank-app\app\src\main\AndroidManifest.xml:19:27-74
+activity#com.diesel.BankApp.RegisterActivity
+ADDED from C:\Users\Felipe Pieschacon\bank\mobile-app\bank-app\app\src\main\AndroidManifest.xml:22:9-25:59
+	android:label
+		ADDED from C:\Users\Felipe Pieschacon\bank\mobile-app\bank-app\app\src\main\AndroidManifest.xml:24:13-45
+	android:theme
+		ADDED from C:\Users\Felipe Pieschacon\bank\mobile-app\bank-app\app\src\main\AndroidManifest.xml:25:13-56
+	android:name
+		ADDED from C:\Users\Felipe Pieschacon\bank\mobile-app\bank-app\app\src\main\AndroidManifest.xml:23:13-63
+uses-sdk
+INJECTED from C:\Users\Felipe Pieschacon\bank\mobile-app\bank-app\app\src\main\AndroidManifest.xml reason: use-sdk injection requested
+INJECTED from C:\Users\Felipe Pieschacon\bank\mobile-app\bank-app\app\src\main\AndroidManifest.xml
+INJECTED from C:\Users\Felipe Pieschacon\bank\mobile-app\bank-app\app\src\main\AndroidManifest.xml
+MERGED from [com.android.support:design:28.0.0] C:\Users\Felipe Pieschacon\.gradle\caches\transforms-2\files-2.1\b4946e7ee174dd1c7970d3da607d3e4c\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:design:28.0.0] C:\Users\Felipe Pieschacon\.gradle\caches\transforms-2\files-2.1\b4946e7ee174dd1c7970d3da607d3e4c\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:appcompat-v7:28.0.0] C:\Users\Felipe Pieschacon\.gradle\caches\transforms-2\files-2.1\8b6fac6ee46d77d47ffc5490d9ae994d\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:appcompat-v7:28.0.0] C:\Users\Felipe Pieschacon\.gradle\caches\transforms-2\files-2.1\8b6fac6ee46d77d47ffc5490d9ae994d\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support.constraint:constraint-layout:1.1.3] C:\Users\Felipe Pieschacon\.gradle\caches\transforms-2\files-2.1\c2243a6ede911e5d84c9e2a62ec571fd\AndroidManifest.xml:5:5-7:41
+MERGED from [com.android.support.constraint:constraint-layout:1.1.3] C:\Users\Felipe Pieschacon\.gradle\caches\transforms-2\files-2.1\c2243a6ede911e5d84c9e2a62ec571fd\AndroidManifest.xml:5:5-7:41
+MERGED from [com.android.support:support-fragment:28.0.0] C:\Users\Felipe Pieschacon\.gradle\caches\transforms-2\files-2.1\d5d48b5be636de40e6d69a7844d6d346\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-fragment:28.0.0] C:\Users\Felipe Pieschacon\.gradle\caches\transforms-2\files-2.1\d5d48b5be636de40e6d69a7844d6d346\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:animated-vector-drawable:28.0.0] C:\Users\Felipe Pieschacon\.gradle\caches\transforms-2\files-2.1\510413e9e0f7af2cd4bf0c9db5861f4f\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:animated-vector-drawable:28.0.0] C:\Users\Felipe Pieschacon\.gradle\caches\transforms-2\files-2.1\510413e9e0f7af2cd4bf0c9db5861f4f\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:recyclerview-v7:28.0.0] C:\Users\Felipe Pieschacon\.gradle\caches\transforms-2\files-2.1\d401b4b14bf28574dd59e4d8f097a2c4\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:recyclerview-v7:28.0.0] C:\Users\Felipe Pieschacon\.gradle\caches\transforms-2\files-2.1\d401b4b14bf28574dd59e4d8f097a2c4\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-core-ui:28.0.0] C:\Users\Felipe Pieschacon\.gradle\caches\transforms-2\files-2.1\227af0c2b6341e04ad7e1be514914245\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-core-ui:28.0.0] C:\Users\Felipe Pieschacon\.gradle\caches\transforms-2\files-2.1\227af0c2b6341e04ad7e1be514914245\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-core-utils:28.0.0] C:\Users\Felipe Pieschacon\.gradle\caches\transforms-2\files-2.1\ac315e4e2845a0a7a3da7606dc004a05\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-core-utils:28.0.0] C:\Users\Felipe Pieschacon\.gradle\caches\transforms-2\files-2.1\ac315e4e2845a0a7a3da7606dc004a05\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-vector-drawable:28.0.0] C:\Users\Felipe Pieschacon\.gradle\caches\transforms-2\files-2.1\10d750fe5c88fd33eb57ef2aa22667a4\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-vector-drawable:28.0.0] C:\Users\Felipe Pieschacon\.gradle\caches\transforms-2\files-2.1\10d750fe5c88fd33eb57ef2aa22667a4\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:transition:28.0.0] C:\Users\Felipe Pieschacon\.gradle\caches\transforms-2\files-2.1\ac8bfd6abdad8d7f5715656d4d7f3068\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:transition:28.0.0] C:\Users\Felipe Pieschacon\.gradle\caches\transforms-2\files-2.1\ac8bfd6abdad8d7f5715656d4d7f3068\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:loader:28.0.0] C:\Users\Felipe Pieschacon\.gradle\caches\transforms-2\files-2.1\68cb158901f00ad25763fbfb454d934e\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:loader:28.0.0] C:\Users\Felipe Pieschacon\.gradle\caches\transforms-2\files-2.1\68cb158901f00ad25763fbfb454d934e\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:viewpager:28.0.0] C:\Users\Felipe Pieschacon\.gradle\caches\transforms-2\files-2.1\b87eb7798c7970a111a236b352391d88\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:viewpager:28.0.0] C:\Users\Felipe Pieschacon\.gradle\caches\transforms-2\files-2.1\b87eb7798c7970a111a236b352391d88\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:coordinatorlayout:28.0.0] C:\Users\Felipe Pieschacon\.gradle\caches\transforms-2\files-2.1\503b0c649459b0b8fc7fe491f66cc387\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:coordinatorlayout:28.0.0] C:\Users\Felipe Pieschacon\.gradle\caches\transforms-2\files-2.1\503b0c649459b0b8fc7fe491f66cc387\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:drawerlayout:28.0.0] C:\Users\Felipe Pieschacon\.gradle\caches\transforms-2\files-2.1\6d6d32c6c9c2ac713eaf2851bff646af\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:drawerlayout:28.0.0] C:\Users\Felipe Pieschacon\.gradle\caches\transforms-2\files-2.1\6d6d32c6c9c2ac713eaf2851bff646af\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:slidingpanelayout:28.0.0] C:\Users\Felipe Pieschacon\.gradle\caches\transforms-2\files-2.1\60180aeaeda1466aa58d91125a9adfe9\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:slidingpanelayout:28.0.0] C:\Users\Felipe Pieschacon\.gradle\caches\transforms-2\files-2.1\60180aeaeda1466aa58d91125a9adfe9\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:customview:28.0.0] C:\Users\Felipe Pieschacon\.gradle\caches\transforms-2\files-2.1\5c4e3c578a62b282fd88bb44ae2352c7\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:customview:28.0.0] C:\Users\Felipe Pieschacon\.gradle\caches\transforms-2\files-2.1\5c4e3c578a62b282fd88bb44ae2352c7\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:swiperefreshlayout:28.0.0] C:\Users\Felipe Pieschacon\.gradle\caches\transforms-2\files-2.1\3dd13886565fd20233661de75a9f9754\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:swiperefreshlayout:28.0.0] C:\Users\Felipe Pieschacon\.gradle\caches\transforms-2\files-2.1\3dd13886565fd20233661de75a9f9754\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:asynclayoutinflater:28.0.0] C:\Users\Felipe Pieschacon\.gradle\caches\transforms-2\files-2.1\686c3f8a36605ad96fc7233f78369d1e\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:asynclayoutinflater:28.0.0] C:\Users\Felipe Pieschacon\.gradle\caches\transforms-2\files-2.1\686c3f8a36605ad96fc7233f78369d1e\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-compat:28.0.0] C:\Users\Felipe Pieschacon\.gradle\caches\transforms-2\files-2.1\5ec69a2c5bd5cb39b820360ca67a7cf7\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-compat:28.0.0] C:\Users\Felipe Pieschacon\.gradle\caches\transforms-2\files-2.1\5ec69a2c5bd5cb39b820360ca67a7cf7\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:versionedparcelable:28.0.0] C:\Users\Felipe Pieschacon\.gradle\caches\transforms-2\files-2.1\704158c6fbec266f306cc9a126326cb4\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:versionedparcelable:28.0.0] C:\Users\Felipe Pieschacon\.gradle\caches\transforms-2\files-2.1\704158c6fbec266f306cc9a126326cb4\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:cursoradapter:28.0.0] C:\Users\Felipe Pieschacon\.gradle\caches\transforms-2\files-2.1\6173d151b1c7f6e7f24ce02c36f5acfe\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:cursoradapter:28.0.0] C:\Users\Felipe Pieschacon\.gradle\caches\transforms-2\files-2.1\6173d151b1c7f6e7f24ce02c36f5acfe\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:cardview-v7:28.0.0] C:\Users\Felipe Pieschacon\.gradle\caches\transforms-2\files-2.1\5fe1fcecfb625d347c8e1bea9ebf47a6\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:cardview-v7:28.0.0] C:\Users\Felipe Pieschacon\.gradle\caches\transforms-2\files-2.1\5fe1fcecfb625d347c8e1bea9ebf47a6\AndroidManifest.xml:20:5-44
+MERGED from [android.arch.lifecycle:runtime:1.1.1] C:\Users\Felipe Pieschacon\.gradle\caches\transforms-2\files-2.1\1cc857182dc9abea94f11b1ec198c56d\AndroidManifest.xml:20:5-44
+MERGED from [android.arch.lifecycle:runtime:1.1.1] C:\Users\Felipe Pieschacon\.gradle\caches\transforms-2\files-2.1\1cc857182dc9abea94f11b1ec198c56d\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:documentfile:28.0.0] C:\Users\Felipe Pieschacon\.gradle\caches\transforms-2\files-2.1\caf8484f1287909227bb6654d50e9bab\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:documentfile:28.0.0] C:\Users\Felipe Pieschacon\.gradle\caches\transforms-2\files-2.1\caf8484f1287909227bb6654d50e9bab\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:localbroadcastmanager:28.0.0] C:\Users\Felipe Pieschacon\.gradle\caches\transforms-2\files-2.1\8f5ec6ecfb12b688a30e1b962d722ad2\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:localbroadcastmanager:28.0.0] C:\Users\Felipe Pieschacon\.gradle\caches\transforms-2\files-2.1\8f5ec6ecfb12b688a30e1b962d722ad2\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:print:28.0.0] C:\Users\Felipe Pieschacon\.gradle\caches\transforms-2\files-2.1\ecef2ec0fde322f800dc127eb711f929\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:print:28.0.0] C:\Users\Felipe Pieschacon\.gradle\caches\transforms-2\files-2.1\ecef2ec0fde322f800dc127eb711f929\AndroidManifest.xml:20:5-44
+MERGED from [android.arch.lifecycle:viewmodel:1.1.1] C:\Users\Felipe Pieschacon\.gradle\caches\transforms-2\files-2.1\e1675c57bbec799d4c6f6f57407092ee\AndroidManifest.xml:20:5-44
+MERGED from [android.arch.lifecycle:viewmodel:1.1.1] C:\Users\Felipe Pieschacon\.gradle\caches\transforms-2\files-2.1\e1675c57bbec799d4c6f6f57407092ee\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:interpolator:28.0.0] C:\Users\Felipe Pieschacon\.gradle\caches\transforms-2\files-2.1\c8222bc11d59586a91a2c8150bdef5c0\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:interpolator:28.0.0] C:\Users\Felipe Pieschacon\.gradle\caches\transforms-2\files-2.1\c8222bc11d59586a91a2c8150bdef5c0\AndroidManifest.xml:20:5-44
+MERGED from [android.arch.lifecycle:livedata:1.1.1] C:\Users\Felipe Pieschacon\.gradle\caches\transforms-2\files-2.1\d748fc603c78a7272c694ef3b46da06e\AndroidManifest.xml:20:5-44
+MERGED from [android.arch.lifecycle:livedata:1.1.1] C:\Users\Felipe Pieschacon\.gradle\caches\transforms-2\files-2.1\d748fc603c78a7272c694ef3b46da06e\AndroidManifest.xml:20:5-44
+MERGED from [android.arch.lifecycle:livedata-core:1.1.1] C:\Users\Felipe Pieschacon\.gradle\caches\transforms-2\files-2.1\85ce544e0ba6ff8c7ff0e850b7576bf8\AndroidManifest.xml:20:5-44
+MERGED from [android.arch.lifecycle:livedata-core:1.1.1] C:\Users\Felipe Pieschacon\.gradle\caches\transforms-2\files-2.1\85ce544e0ba6ff8c7ff0e850b7576bf8\AndroidManifest.xml:20:5-44
+MERGED from [android.arch.core:runtime:1.1.1] C:\Users\Felipe Pieschacon\.gradle\caches\transforms-2\files-2.1\74a83b7fa7c9ef718a9f61e573e4aaeb\AndroidManifest.xml:20:5-44
+MERGED from [android.arch.core:runtime:1.1.1] C:\Users\Felipe Pieschacon\.gradle\caches\transforms-2\files-2.1\74a83b7fa7c9ef718a9f61e573e4aaeb\AndroidManifest.xml:20:5-44
+INJECTED from C:\Users\Felipe Pieschacon\bank\mobile-app\bank-app\app\src\main\AndroidManifest.xml
+INJECTED from C:\Users\Felipe Pieschacon\bank\mobile-app\bank-app\app\src\main\AndroidManifest.xml
+	android:targetSdkVersion
+		INJECTED from C:\Users\Felipe Pieschacon\bank\mobile-app\bank-app\app\src\main\AndroidManifest.xml
+		ADDED from C:\Users\Felipe Pieschacon\bank\mobile-app\bank-app\app\src\main\AndroidManifest.xml
+		INJECTED from C:\Users\Felipe Pieschacon\bank\mobile-app\bank-app\app\src\main\AndroidManifest.xml
+	android:minSdkVersion
+		INJECTED from C:\Users\Felipe Pieschacon\bank\mobile-app\bank-app\app\src\main\AndroidManifest.xml
+		ADDED from C:\Users\Felipe Pieschacon\bank\mobile-app\bank-app\app\src\main\AndroidManifest.xml
+		INJECTED from C:\Users\Felipe Pieschacon\bank\mobile-app\bank-app\app\src\main\AndroidManifest.xml
