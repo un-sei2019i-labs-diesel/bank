@@ -2,36 +2,35 @@ package com.diesel.BankApp.dataAccess.models;
 
 
 import com.j256.ormlite.field.DatabaseField;
-import com.j256.ormlite.table.DatabaseTable;
 
 public class Account {
 
     @DatabaseField
-    int numero;
+    int number;
 
     @DatabaseField
-    String id_asociado;
+    int idLinked;
 
     @DatabaseField
     double balance;
 
     @DatabaseField
-    String historial;
+    String history;
 
-    public int getNumero() {
-        return numero;
+    public int getNumber() {
+        return number;
     }
 
-    public void setNumero(int numero) {
-        this.numero = numero;
+    public void setNumber(int number) {
+        this.number = number;
     }
 
-    public String getId_asociado() {
-        return id_asociado;
+    public int getIdLinked() {
+        return idLinked;
     }
 
-    public void setId_asociado(String id_asociado) {
-        this.id_asociado = id_asociado;
+    public void setIdLinked(int idLinked) {
+        this.idLinked = idLinked;
     }
 
     public double getBalance() {
@@ -42,32 +41,32 @@ public class Account {
         this.balance = balance;
     }
 
-    public String getHistorial() {
-        return historial;
+    public String getHistory() {
+        return history;
     }
 
-    public void setHistorial(String historial) {
-        this.historial = historial;
+    public void setHistory(String history) {
+        this.history = history;
     }
 
     public Account() {
 
     }
 
-    public Account(int numero, String id_asociado, double balance, String historial) {
-        this.numero = numero;
-        this.id_asociado = id_asociado;
+    public Account(int number, int idLinked, double balance, String history) {
+        this.number = number;
+        this.idLinked = idLinked;
         this.balance = balance;
-        this.historial = historial;
+        this.history = history;
     }
 
     @Override
     public String toString() {
         return "Account{" +
-                "numero=" + numero +
-                ", id_asociado='" + id_asociado + '\'' +
+                "number=" + number +
+                ", idLinked='" + idLinked + '\'' +
                 ", balance=" + balance +
-                ", historial='" + historial + '\'' +
+                ", history='" + history + '\'' +
                 '}';
     }
 }

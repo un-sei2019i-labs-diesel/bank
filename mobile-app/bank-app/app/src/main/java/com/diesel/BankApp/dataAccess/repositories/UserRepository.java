@@ -63,7 +63,7 @@ public class UserRepository extends AppCompatActivity {
         QueryBuilder<User, Integer> queryBuilder =
                 UserDao.queryBuilder();
         // the 'id' field must be equal to Id
-        queryBuilder.where().eq("userName", name);
+        queryBuilder.where().eq("name", name);
         // prepare our sql statement
         PreparedQuery<User> preparedQuery = queryBuilder.prepare();
 
@@ -104,7 +104,7 @@ public class UserRepository extends AppCompatActivity {
         // set the criteria like you would a QueryBuilder
         updateBuilder.where().eq("id", Id);
         // update the value of your field(s)
-        updateBuilder.updateColumnValue("change_date", String.valueOf(Calendar.getInstance().getTime().getTime() /* value */));
+        updateBuilder.updateColumnValue("changeDate", String.valueOf(Calendar.getInstance().getTime().getTime() /* value */));
         updateBuilder.update();
 
         List<User> users = UserDao.queryForAll();
@@ -123,7 +123,7 @@ public class UserRepository extends AppCompatActivity {
         // set the criteria like you would a QueryBuilder
         updateBuilder.where().eq("id", Id);
         // update the value of your field(s)
-        updateBuilder.updateColumnValue("userName", newName /* value */);
+        updateBuilder.updateColumnValue("name", newName /* value */);
         updateBuilder.update();
 
         List<User> users = UserDao.queryForAll();

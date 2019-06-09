@@ -28,7 +28,7 @@ public class AccountRepository extends AppCompatActivity {
 
         //query
         List<Account> accountList = AccDao.queryForAll();
-        Log.d("demo", accountList.toString());
+        Log.d("demo account", accountList.toString());
 
         OpenHelperManager.releaseHelper();
     }
@@ -42,7 +42,7 @@ public class AccountRepository extends AppCompatActivity {
         QueryBuilder<Account, Integer> queryBuilder =
                 AccDao.queryBuilder();
         // the 'id' field must be equal to Id
-        queryBuilder.where().eq("numero", Id);
+        queryBuilder.where().eq("number", Id);
         // prepare our sql statement
         PreparedQuery<Account> preparedQuery = queryBuilder.prepare();
 
@@ -54,7 +54,7 @@ public class AccountRepository extends AppCompatActivity {
         return accountList;
     }
 
-    public List<Account> getAccountByIdLinked(String idLinked, Context context)throws SQLException {
+    public List<Account> getAccountByIdLinked(int idLinked, Context context)throws SQLException {
         dbHelper = OpenHelperManager.getHelper(context, Database.class);
 
         RuntimeExceptionDao<Account, Integer> AccDao = dbHelper.getAccountRuntimeExceptionDao();
@@ -63,7 +63,7 @@ public class AccountRepository extends AppCompatActivity {
         QueryBuilder<Account, Integer> queryBuilder =
                 AccDao.queryBuilder();
         // the 'id' field must be equal to Id
-        queryBuilder.where().eq("id_asociado", idLinked);
+        queryBuilder.where().eq("idLinked", idLinked);
         // prepare our sql statement
         PreparedQuery<Account> preparedQuery = queryBuilder.prepare();
 
@@ -83,13 +83,13 @@ public class AccountRepository extends AppCompatActivity {
 
 
         // set the criteria like you would a QueryBuilder
-        updateBuilder.where().eq("numero", oldNumber);
+        updateBuilder.where().eq("number", oldNumber);
         // update the value of your field(s)
-        updateBuilder.updateColumnValue("numero", newNumber /* value */);
+        updateBuilder.updateColumnValue("number", newNumber /* value */);
         updateBuilder.update();
 
         List<Account> accountList  = AccDao.queryForAll();
-        Log.d("demo user", accountList.toString());
+        Log.d("demo account", accountList.toString());
 
         OpenHelperManager.releaseHelper();
     }
@@ -102,13 +102,13 @@ public class AccountRepository extends AppCompatActivity {
 
 
         // set the criteria like you would a QueryBuilder
-        updateBuilder.where().eq("numero", number);
+        updateBuilder.where().eq("number", number);
         // update the value of your field(s)
-        updateBuilder.updateColumnValue("id_asociado", newIdLinked /* value */);
+        updateBuilder.updateColumnValue("idLinked", newIdLinked /* value */);
         updateBuilder.update();
 
         List<Account> accountList  = AccDao.queryForAll();
-        Log.d("demo user", accountList.toString());
+        Log.d("demo account", accountList.toString());
 
         OpenHelperManager.releaseHelper();
     }
@@ -121,13 +121,13 @@ public class AccountRepository extends AppCompatActivity {
 
 
         // set the criteria like you would a QueryBuilder
-        updateBuilder.where().eq("numero", number);
+        updateBuilder.where().eq("number", number);
         // update the value of your field(s)
         updateBuilder.updateColumnValue("balance", newBalance /* value */);
         updateBuilder.update();
 
         List<Account> accountList  = AccDao.queryForAll();
-        Log.d("demo user", accountList.toString());
+        Log.d("demo account", accountList.toString());
 
         OpenHelperManager.releaseHelper();
     }
@@ -140,13 +140,13 @@ public class AccountRepository extends AppCompatActivity {
 
 
         // set the criteria like you would a QueryBuilder
-        updateBuilder.where().eq("numero", number);
+        updateBuilder.where().eq("number", number);
         // update the value of your field(s)
-        updateBuilder.updateColumnValue("historial", newHistory /* value */);
+        updateBuilder.updateColumnValue("history", newHistory /* value */);
         updateBuilder.update();
 
         List<Account> accountList  = AccDao.queryForAll();
-        Log.d("demo user", accountList.toString());
+        Log.d("demo account", accountList.toString());
 
         OpenHelperManager.releaseHelper();
     }
@@ -159,11 +159,11 @@ public class AccountRepository extends AppCompatActivity {
                 AccDao.deleteBuilder();
 
         // only delete the rows where id is Id
-        deleteBuilder.where().eq("numero", Id);
+        deleteBuilder.where().eq("number", Id);
         deleteBuilder.delete();
 
         List<Account> accountList = AccDao.queryForAll();
-        Log.d("demo user", accountList.toString());
+        Log.d("demo account", accountList.toString());
 
         OpenHelperManager.releaseHelper();
 

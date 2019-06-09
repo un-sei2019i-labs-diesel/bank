@@ -55,7 +55,7 @@ public class LoginActivity extends AppCompatActivity {
 
         //<--------------------------------------INICIO DE METODOS ACCOUNT-------------------------------------------------------->
         /*create de la account*/
-        accRepo.createAccount(new Account(1234567, "Account 2 text", 100000, "Account 2 Historia"),this);
+        accRepo.createAccount(new Account(1234567, 123456, 100000, "Account 2 Historia"),this);
 
         /*get account by number*/
         try {
@@ -67,7 +67,7 @@ public class LoginActivity extends AppCompatActivity {
 
         /*get account bu Id Linked*/
         try {
-            List<Account> result = accRepo.getAccountByIdLinked("Account 2 text", this);
+            List<Account> result = accRepo.getAccountByIdLinked(123456, this);
             Log.d("demo account", result.toString());
         } catch (SQLException e) {
             e.printStackTrace();
@@ -111,7 +111,7 @@ public class LoginActivity extends AppCompatActivity {
 
         //<---------------------------------------INICIO DE METODOS USER-------------------------------------------------------->
         /*create del usuario*/
-        userRepo.createUser(new User(123456,"tomperez","1234567","123456","987654123"),this);
+        userRepo.createUser(new User(123456,"tomperez","1234567","123456"),this);
 
         /*get user by Id*/
         try {

@@ -1,21 +1,21 @@
 #
-# generated on 2019/06/08 05:46:26
+# generated on 2019/06/08 07:21:20
 #
 # --table-start--
 dataClass=com.diesel.BankApp.dataAccess.models.Account
 tableName=account
 # --table-fields-start--
 # --field-start--
-fieldName=numero
+fieldName=number
 # --field-end--
 # --field-start--
-fieldName=id_asociado
+fieldName=idLinked
 # --field-end--
 # --field-start--
 fieldName=balance
 # --field-end--
 # --field-start--
-fieldName=historial
+fieldName=history
 # --field-end--
 # --table-fields-end--
 # --table-end--
@@ -28,16 +28,13 @@ tableName=user
 fieldName=id
 # --field-end--
 # --field-start--
-fieldName=userName
+fieldName=name
 # --field-end--
 # --field-start--
-fieldName=change_date
+fieldName=changeDate
 # --field-end--
 # --field-start--
 fieldName=password
-# --field-end--
-# --field-start--
-fieldName=account_number
 # --field-end--
 # --table-fields-end--
 # --table-end--
