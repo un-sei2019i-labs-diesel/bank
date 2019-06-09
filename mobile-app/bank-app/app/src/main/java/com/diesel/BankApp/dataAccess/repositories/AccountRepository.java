@@ -113,7 +113,7 @@ public class AccountRepository extends AppCompatActivity {
         OpenHelperManager.releaseHelper();
     }
 
-    public void updateAccountBalance(int number, int newBalance, Context context) throws SQLException {
+    public void updateAccountBalance(int number, double newBalance, Context context) throws SQLException {
         dbHelper = OpenHelperManager.getHelper(context, Database.class);
 
         RuntimeExceptionDao<Account, Integer> AccDao = dbHelper.getAccountRuntimeExceptionDao();
