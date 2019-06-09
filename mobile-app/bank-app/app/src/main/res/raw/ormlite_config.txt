@@ -1,0 +1,54 @@
+#
+# generated on 2019/06/08 07:21:20
+#
+# --table-start--
+dataClass=com.diesel.BankApp.dataAccess.models.Account
+tableName=account
+# --table-fields-start--
+# --field-start--
+fieldName=number
+# --field-end--
+# --field-start--
+fieldName=idLinked
+# --field-end--
+# --field-start--
+fieldName=balance
+# --field-end--
+# --field-start--
+fieldName=history
+# --field-end--
+# --table-fields-end--
+# --table-end--
+#################################
+# --table-start--
+dataClass=com.diesel.BankApp.dataAccess.models.User
+tableName=user
+# --table-fields-start--
+# --field-start--
+fieldName=id
+# --field-end--
+# --field-start--
+fieldName=name
+# --field-end--
+# --field-start--
+fieldName=changeDate
+# --field-end--
+# --field-start--
+fieldName=password
+# --field-end--
+# --table-fields-end--
+# --table-end--
+#################################
+# --table-start--
+dataClass=com.diesel.BankApp.dataAccess.models.Administrator
+tableName=administrator
+# --table-fields-start--
+# --field-start--
+fieldName=id
+# --field-end--
+# --field-start--
+fieldName=password
+# --field-end--
+# --table-fields-end--
+# --table-end--
+#################################
