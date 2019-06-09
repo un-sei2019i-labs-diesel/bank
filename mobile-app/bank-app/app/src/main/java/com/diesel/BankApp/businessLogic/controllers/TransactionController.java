@@ -11,7 +11,7 @@ import com.diesel.BankApp.dataAccess.repositories.AccountRepository;
 import java.sql.SQLException;
 import java.util.List;
 
-public class SendMoneyController {
+public class TransactionController {
     AccountRepository accRepo = new AccountRepository();
     List<Account> result;
     Account cuentaEmisor;
@@ -34,6 +34,15 @@ public class SendMoneyController {
             //TODO error
             return false;
         }else{
+            //Obtiene la cuenta del receptor de la base de datos
+            try {
+                result = accRepo.getAccountByNumber(idReceptor,context);
+                Log.d("demo account", result.toString());
+            } catch (SQLException e){
+                e.printStackTrace();
+                return false;
+            }
+
             //Resta la cantidad a enviar al balance del emisor
             newBalance = cuentaEmisor.getBalance()-cantidad;
             try {
@@ -43,14 +52,7 @@ public class SendMoneyController {
             }
 
 
-            //Obtiene la cuenta del receptor de la base de datos
-            try {
-                result = accRepo.getAccountByNumber(idReceptor,context);
-                Log.d("demo account", result.toString());
-            } catch (SQLException e){
-                e.printStackTrace();
-                return false;
-            }
+
             cuentaReceptor = result.get(0);
             //Suma la cantidad a enviar al balance del receptor
             newBalance = cuentaReceptor.getBalance()+cantidad;

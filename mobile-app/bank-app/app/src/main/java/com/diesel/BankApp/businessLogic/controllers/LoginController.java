@@ -8,7 +8,7 @@ import com.diesel.BankApp.dataAccess.repositories.UserRepository;
 import java.sql.SQLException;
 import java.util.List;
 
-public class LoginController extends mainController {
+public class LoginController extends MainController {
     UserRepository userRepo = new UserRepository();
     List<User> result;
     User currentUser;

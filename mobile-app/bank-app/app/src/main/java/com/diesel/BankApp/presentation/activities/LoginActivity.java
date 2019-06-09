@@ -11,7 +11,14 @@ import android.widget.EditText;
 import android.widget.TextView;
 
 import com.diesel.BankApp.R;
+import com.diesel.BankApp.businessLogic.controllers.LoginController;
+import com.diesel.BankApp.businessLogic.controllers.MainController;
+import com.diesel.BankApp.dataAccess.models.Account;
 import com.diesel.BankApp.dataAccess.models.User;
+import com.diesel.BankApp.dataAccess.repositories.AccountRepository;
+import com.diesel.BankApp.dataAccess.repositories.UserRepository;
+
+import java.sql.SQLException;
 
 public class LoginActivity extends AppCompatActivity {
 
@@ -50,15 +57,34 @@ public class LoginActivity extends AppCompatActivity {
 
                     //Authenticate user
                     User currentUser = null;
+                    Account currentAccount = null;
+                    int success = 0;
                     try {
                         //log in logic
+                        LoginController controller = new LoginController();
+                        success = controller.login(Username,Password,LoginActivity.this);
+
 
                     } catch (Exception e) {
                         e.printStackTrace();
                     }
 
                     //Check Authentication is successful or not
-                    if (/*success logic*/) {
+                    if (success != 0) {
+                        UserRepository urepo = new UserRepository();
+                        try {
+                            currentUser = urepo.getUserByName(Username,LoginActivity.this).get(0);
+                        } catch (SQLException e) {
+                            e.printStackTrace();
+                        }
+                        AccountRepository arepo = new AccountRepository();
+                        try {
+                            currentAccount = arepo.getAccountByIdLinked(currentUser.getId(),LoginActivity.this).get(0);
+                        } catch (SQLException e) {
+                            e.printStackTrace();
+                        }
+                        MainController.cuenta = currentAccount;
+                        MainController.usuario = currentUser;
                         Snackbar.make(buttonLogin, "Successfully Logged in!", Snackbar.LENGTH_LONG).show();
 
                         //User Logged in Successfully Launch You home screen activity

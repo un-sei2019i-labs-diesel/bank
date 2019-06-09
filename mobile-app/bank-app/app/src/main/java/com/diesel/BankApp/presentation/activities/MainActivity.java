@@ -10,6 +10,7 @@ import android.widget.ListView;
 import android.widget.TextView;
 
 import com.diesel.BankApp.R;
+import com.diesel.BankApp.businessLogic.controllers.MainController;
 
 import java.util.ArrayList;
 
@@ -30,18 +31,21 @@ public class MainActivity extends AppCompatActivity {
 
         final TextView username = findViewById(R.id.usernameTitle);
         username.setText(
-                MainController.user.name);
+                MainController.usuario.getName());
 
         final TextView account = findViewById(R.id.accountNumber);
         account.setText(
-                String.valueOf(MainController.account.number));
+                String.valueOf(MainController.cuenta.getNumber()));
 
         final TextView balance = findViewById(R.id.balanceTotal);
         balance.setText(
-                String.valueOf(MainController.account.balance));
+                String.valueOf(MainController.cuenta.getBalance()));
 
         history = new ArrayList<>();
-        history.add(MainController.account.history.split(";"));
+        String[] splitter = MainController.cuenta.getHistory().split(";");
+        for (int i = 0; i < splitter.length; i++){
+            history.add(splitter[1]);
+        }
         initViews();
         initLogOutTextView();
         //set click event of transaction button

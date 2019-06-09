@@ -11,7 +11,7 @@ import android.widget.EditText;
 import android.widget.TextView;
 
 import com.diesel.BankApp.R;
-
+import com.diesel.BankApp.businessLogic.controllers.RegisterController;
 
 
 public class RegisterActivity extends AppCompatActivity {
@@ -45,8 +45,13 @@ public class RegisterActivity extends AppCompatActivity {
                     String Password = editTextPassword.getText().toString();
 
                     //Register logic
-
-                    Snackbar.make(buttonRegister, "User created successfully! Please Login ", Snackbar.LENGTH_LONG).show();
+                    RegisterController controller = new RegisterController();
+                    boolean success = controller.register(ID,Username,Password, RegisterActivity.this);
+                    if (success == true){
+                        Snackbar.make(buttonRegister, "User created successfully! Please Log in ", Snackbar.LENGTH_LONG).show();
+                    }else{
+                        Snackbar.make(buttonRegister, "User creation failed! Please try again ", Snackbar.LENGTH_LONG).show();
+                    }
 
                 }
             }

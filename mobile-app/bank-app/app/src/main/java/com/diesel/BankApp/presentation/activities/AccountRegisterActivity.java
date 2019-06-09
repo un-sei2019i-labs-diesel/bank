@@ -12,6 +12,7 @@ import android.widget.TextView;
 
 import com.diesel.BankApp.R;
 
+
 public class AccountRegisterActivity extends AppCompatActivity {
     //Declaration EditTexts
     EditText editTextNumber;
@@ -42,6 +43,8 @@ public class AccountRegisterActivity extends AppCompatActivity {
                     double balance = Double.parseDouble(editTextBalance.getText().toString());
 
                     //Account register logic
+
+
 
                     Snackbar.make(buttonRegister, "Account created successfully! Please Login ", Snackbar.LENGTH_LONG).show();
 

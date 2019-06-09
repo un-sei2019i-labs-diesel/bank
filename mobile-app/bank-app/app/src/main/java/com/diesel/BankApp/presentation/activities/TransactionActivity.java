@@ -11,6 +11,8 @@ import android.widget.EditText;
 import android.widget.TextView;
 
 import com.diesel.BankApp.R;
+import com.diesel.BankApp.businessLogic.controllers.MainController;
+import com.diesel.BankApp.businessLogic.controllers.TransactionController;
 
 public class TransactionActivity extends AppCompatActivity {
 
@@ -40,8 +42,14 @@ public class TransactionActivity extends AppCompatActivity {
                     double amount = Double.parseDouble(editTextAmount.getText().toString());
 
                     //transaction logic
+                    TransactionController controller = new TransactionController();
+                    boolean success = controller.sendMoney(MainController.cuenta.getNumber(),amount,account,TransactionActivity.this);
 
-                    Snackbar.make(buttonContinue, "Transaction done successfully!", Snackbar.LENGTH_LONG).show();
+                    if (success == true){
+                        Snackbar.make(buttonContinue, "Transaction done successfully!", Snackbar.LENGTH_LONG).show();
+                    }else{
+                        Snackbar.make(buttonContinue, "Transaction failed! please try again", Snackbar.LENGTH_LONG).show();
+                    }
 
                 }
             }
