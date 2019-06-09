@@ -44,7 +44,7 @@ public class MainActivity extends AppCompatActivity {
         history = new ArrayList<>();
         String[] splitter = MainController.cuenta.getHistory().split(";");
         for (int i = 0; i < splitter.length; i++){
-            history.add(splitter[1]);
+            history.add(splitter[i]);
         }
         initViews();
         initLogOutTextView();

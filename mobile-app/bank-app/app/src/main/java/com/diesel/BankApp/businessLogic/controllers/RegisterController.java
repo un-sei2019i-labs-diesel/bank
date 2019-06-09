@@ -2,11 +2,11 @@ package com.diesel.BankApp.businessLogic.controllers;
 
 import android.content.Context;
 import android.util.Base64;
-import android.util.Log;
 
 import com.diesel.BankApp.dataAccess.models.User;
 import com.diesel.BankApp.dataAccess.repositories.UserRepository;
 
+import java.nio.charset.StandardCharsets;
 import java.security.MessageDigest;
 import java.sql.SQLException;
 import java.util.Calendar;
@@ -24,9 +24,10 @@ public class RegisterController {
     public boolean register(int ID, String username, String password, Context context){
         try {
             result = userRepo.getUserById(ID,context);
-            Log.d("demo account", result.toString());
             //TODO la cuennta ya existe
-            return false;
+            if (!(result.isEmpty())) {
+                return false;
+            }
         }catch (SQLException e){
             e.printStackTrace();
         }
@@ -44,7 +45,7 @@ public class RegisterController {
     }
     private SecretKeySpec generateKey(String password) throws Exception{
         MessageDigest sha = MessageDigest.getInstance("SHA-256");
-        byte[] key = password.getBytes("UTF-8");
+        byte[] key = password.getBytes(StandardCharsets.UTF_8);
         key = sha.digest(key);
         SecretKeySpec secretKey = new SecretKeySpec(key, "AES");
         return secretKey;

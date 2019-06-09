@@ -1,9 +1,9 @@
 -- Merging decision tree log ---
 manifest
-ADDED from C:\Users\Felipe Pieschacon\bank\mobile-app\bank-app\app\src\main\AndroidManifest.xml:2:1-29:12
-INJECTED from C:\Users\Felipe Pieschacon\bank\mobile-app\bank-app\app\src\main\AndroidManifest.xml:2:1-29:12
-INJECTED from C:\Users\Felipe Pieschacon\bank\mobile-app\bank-app\app\src\main\AndroidManifest.xml:2:1-29:12
-INJECTED from C:\Users\Felipe Pieschacon\bank\mobile-app\bank-app\app\src\main\AndroidManifest.xml:2:1-29:12
+ADDED from C:\Users\Felipe Pieschacon\bank\mobile-app\bank-app\app\src\main\AndroidManifest.xml:2:1-41:12
+INJECTED from C:\Users\Felipe Pieschacon\bank\mobile-app\bank-app\app\src\main\AndroidManifest.xml:2:1-41:12
+INJECTED from C:\Users\Felipe Pieschacon\bank\mobile-app\bank-app\app\src\main\AndroidManifest.xml:2:1-41:12
+INJECTED from C:\Users\Felipe Pieschacon\bank\mobile-app\bank-app\app\src\main\AndroidManifest.xml:2:1-41:12
 MERGED from [com.android.support:design:28.0.0] C:\Users\Felipe Pieschacon\.gradle\caches\transforms-2\files-2.1\b4946e7ee174dd1c7970d3da607d3e4c\AndroidManifest.xml:17:1-24:12
 MERGED from [com.android.support:appcompat-v7:28.0.0] C:\Users\Felipe Pieschacon\.gradle\caches\transforms-2\files-2.1\8b6fac6ee46d77d47ffc5490d9ae994d\AndroidManifest.xml:17:1-22:12
 MERGED from [com.android.support.constraint:constraint-layout:1.1.3] C:\Users\Felipe Pieschacon\.gradle\caches\transforms-2\files-2.1\c2243a6ede911e5d84c9e2a62ec571fd\AndroidManifest.xml:2:1-11:12
@@ -35,25 +35,25 @@ MERGED from [com.android.support:interpolator:28.0.0] C:\Users\Felipe Pieschacon
 MERGED from [android.arch.lifecycle:livedata:1.1.1] C:\Users\Felipe Pieschacon\.gradle\caches\transforms-2\files-2.1\d748fc603c78a7272c694ef3b46da06e\AndroidManifest.xml:17:1-22:12
 MERGED from [android.arch.lifecycle:livedata-core:1.1.1] C:\Users\Felipe Pieschacon\.gradle\caches\transforms-2\files-2.1\85ce544e0ba6ff8c7ff0e850b7576bf8\AndroidManifest.xml:17:1-22:12
 MERGED from [android.arch.core:runtime:1.1.1] C:\Users\Felipe Pieschacon\.gradle\caches\transforms-2\files-2.1\74a83b7fa7c9ef718a9f61e573e4aaeb\AndroidManifest.xml:17:1-22:12
-INJECTED from C:\Users\Felipe Pieschacon\bank\mobile-app\bank-app\app\src\main\AndroidManifest.xml:2:1-29:12
-INJECTED from C:\Users\Felipe Pieschacon\bank\mobile-app\bank-app\app\src\main\AndroidManifest.xml:2:1-29:12
-INJECTED from C:\Users\Felipe Pieschacon\bank\mobile-app\bank-app\app\src\main\AndroidManifest.xml:2:1-29:12
+INJECTED from C:\Users\Felipe Pieschacon\bank\mobile-app\bank-app\app\src\main\AndroidManifest.xml:2:1-41:12
+INJECTED from C:\Users\Felipe Pieschacon\bank\mobile-app\bank-app\app\src\main\AndroidManifest.xml:2:1-41:12
+INJECTED from C:\Users\Felipe Pieschacon\bank\mobile-app\bank-app\app\src\main\AndroidManifest.xml:2:1-41:12
 	package
 		ADDED from C:\Users\Felipe Pieschacon\bank\mobile-app\bank-app\app\src\main\AndroidManifest.xml:3:5-33
 		INJECTED from C:\Users\Felipe Pieschacon\bank\mobile-app\bank-app\app\src\main\AndroidManifest.xml
 		INJECTED from C:\Users\Felipe Pieschacon\bank\mobile-app\bank-app\app\src\main\AndroidManifest.xml
 	android:versionName
 		INJECTED from C:\Users\Felipe Pieschacon\bank\mobile-app\bank-app\app\src\main\AndroidManifest.xml
-		ADDED from C:\Users\Felipe Pieschacon\bank\mobile-app\bank-app\app\src\main\AndroidManifest.xml:2:1-29:12
+		ADDED from C:\Users\Felipe Pieschacon\bank\mobile-app\bank-app\app\src\main\AndroidManifest.xml:2:1-41:12
 		INJECTED from C:\Users\Felipe Pieschacon\bank\mobile-app\bank-app\app\src\main\AndroidManifest.xml
 	android:versionCode
 		INJECTED from C:\Users\Felipe Pieschacon\bank\mobile-app\bank-app\app\src\main\AndroidManifest.xml
-		ADDED from C:\Users\Felipe Pieschacon\bank\mobile-app\bank-app\app\src\main\AndroidManifest.xml:2:1-29:12
+		ADDED from C:\Users\Felipe Pieschacon\bank\mobile-app\bank-app\app\src\main\AndroidManifest.xml:2:1-41:12
 		INJECTED from C:\Users\Felipe Pieschacon\bank\mobile-app\bank-app\app\src\main\AndroidManifest.xml
 	xmlns:android
 		ADDED from C:\Users\Felipe Pieschacon\bank\mobile-app\bank-app\app\src\main\AndroidManifest.xml:2:11-69
 application
-ADDED from C:\Users\Felipe Pieschacon\bank\mobile-app\bank-app\app\src\main\AndroidManifest.xml:5:5-27:19
+ADDED from C:\Users\Felipe Pieschacon\bank\mobile-app\bank-app\app\src\main\AndroidManifest.xml:5:5-39:19
 MERGED from [com.android.support:design:28.0.0] C:\Users\Felipe Pieschacon\.gradle\caches\transforms-2\files-2.1\b4946e7ee174dd1c7970d3da607d3e4c\AndroidManifest.xml:22:5-20
 MERGED from [com.android.support:design:28.0.0] C:\Users\Felipe Pieschacon\.gradle\caches\transforms-2\files-2.1\b4946e7ee174dd1c7970d3da607d3e4c\AndroidManifest.xml:22:5-20
 MERGED from [com.android.support.constraint:constraint-layout:1.1.3] C:\Users\Felipe Pieschacon\.gradle\caches\transforms-2\files-2.1\c2243a6ede911e5d84c9e2a62ec571fd\AndroidManifest.xml:9:5-20
@@ -102,6 +102,30 @@ ADDED from C:\Users\Felipe Pieschacon\bank\mobile-app\bank-app\app\src\main\Andr
 		ADDED from C:\Users\Felipe Pieschacon\bank\mobile-app\bank-app\app\src\main\AndroidManifest.xml:25:13-56
 	android:name
 		ADDED from C:\Users\Felipe Pieschacon\bank\mobile-app\bank-app\app\src\main\AndroidManifest.xml:23:13-87
+activity#com.diesel.BankApp.presentation.activities.AccountRegisterActivity
+ADDED from C:\Users\Felipe Pieschacon\bank\mobile-app\bank-app\app\src\main\AndroidManifest.xml:26:9-29:59
+	android:label
+		ADDED from C:\Users\Felipe Pieschacon\bank\mobile-app\bank-app\app\src\main\AndroidManifest.xml:28:13-45
+	android:theme
+		ADDED from C:\Users\Felipe Pieschacon\bank\mobile-app\bank-app\app\src\main\AndroidManifest.xml:29:13-56
+	android:name
+		ADDED from C:\Users\Felipe Pieschacon\bank\mobile-app\bank-app\app\src\main\AndroidManifest.xml:27:13-94
+activity#com.diesel.BankApp.presentation.activities.MainActivity
+ADDED from C:\Users\Felipe Pieschacon\bank\mobile-app\bank-app\app\src\main\AndroidManifest.xml:30:9-33:59
+	android:label
+		ADDED from C:\Users\Felipe Pieschacon\bank\mobile-app\bank-app\app\src\main\AndroidManifest.xml:32:13-45
+	android:theme
+		ADDED from C:\Users\Felipe Pieschacon\bank\mobile-app\bank-app\app\src\main\AndroidManifest.xml:33:13-56
+	android:name
+		ADDED from C:\Users\Felipe Pieschacon\bank\mobile-app\bank-app\app\src\main\AndroidManifest.xml:31:13-83
+activity#com.diesel.BankApp.presentation.activities.TransactionActivity
+ADDED from C:\Users\Felipe Pieschacon\bank\mobile-app\bank-app\app\src\main\AndroidManifest.xml:34:9-37:59
+	android:label
+		ADDED from C:\Users\Felipe Pieschacon\bank\mobile-app\bank-app\app\src\main\AndroidManifest.xml:36:13-45
+	android:theme
+		ADDED from C:\Users\Felipe Pieschacon\bank\mobile-app\bank-app\app\src\main\AndroidManifest.xml:37:13-56
+	android:name
+		ADDED from C:\Users\Felipe Pieschacon\bank\mobile-app\bank-app\app\src\main\AndroidManifest.xml:35:13-90
 uses-sdk
 INJECTED from C:\Users\Felipe Pieschacon\bank\mobile-app\bank-app\app\src\main\AndroidManifest.xml reason: use-sdk injection requested
 INJECTED from C:\Users\Felipe Pieschacon\bank\mobile-app\bank-app\app\src\main\AndroidManifest.xml

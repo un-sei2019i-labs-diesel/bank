@@ -8,5 +8,5 @@ public class MainController {
     public static User usuario;
     public static Account cuenta;
     public static Administrator adminstrador;
-
 }
+

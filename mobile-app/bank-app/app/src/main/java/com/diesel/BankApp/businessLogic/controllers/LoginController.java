@@ -25,8 +25,8 @@ public class LoginController extends MainController {
             return 0;
         }
         currentUser = result.get(0);
-        //verifica que la contraseña sea coerrecta.
-        if(currentUser.getPassword()!=password){
+        //verifica que la contraseña sea correcta.
+        if (!currentUser.getPassword().equals(password)) {
             //TODO error contraseña incorrecta
             return 0;
         }else{

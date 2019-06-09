@@ -11,6 +11,7 @@ import android.widget.EditText;
 import android.widget.TextView;
 
 import com.diesel.BankApp.R;
+import com.diesel.BankApp.businessLogic.controllers.AccountRegisterController;
 
 
 public class AccountRegisterActivity extends AppCompatActivity {
@@ -43,10 +44,14 @@ public class AccountRegisterActivity extends AppCompatActivity {
                     double balance = Double.parseDouble(editTextBalance.getText().toString());
 
                     //Account register logic
+                    AccountRegisterController controller = new AccountRegisterController();
+                    boolean success = controller.register(number, username, balance, AccountRegisterActivity.this);
+                    if (success == true) {
+                        Snackbar.make(buttonRegister, "Account created successfully! Please Log in ", Snackbar.LENGTH_LONG).show();
+                    } else {
+                        Snackbar.make(buttonRegister, "Account creation failed! Please try again ", Snackbar.LENGTH_LONG).show();
+                    }
 
-
-
-                    Snackbar.make(buttonRegister, "Account created successfully! Please Login ", Snackbar.LENGTH_LONG).show();
 
                 }
             }
