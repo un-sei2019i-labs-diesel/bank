@@ -7,6 +7,7 @@ import android.support.design.widget.TextInputLayout;
 import android.support.v7.app.AppCompatActivity;
 import android.text.Html;
 import android.text.Spanned;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
@@ -15,9 +16,14 @@ import android.widget.TextView;
 import com.diesel.BankApp.R;
 import com.diesel.BankApp.dataAccess.database.Database;
 import com.diesel.BankApp.dataAccess.models.Account;
+import com.diesel.BankApp.dataAccess.models.Administrator;
 import com.diesel.BankApp.dataAccess.models.User;
 import com.diesel.BankApp.dataAccess.repositories.AccountRepository;
+import com.diesel.BankApp.dataAccess.repositories.AdministratorRepository;
 import com.diesel.BankApp.dataAccess.repositories.UserRepository;
+
+import java.sql.SQLException;
+import java.util.List;
 
 public class LoginActivity extends AppCompatActivity {
 
@@ -35,8 +41,9 @@ public class LoginActivity extends AppCompatActivity {
     //Declaration Database
     Database database;
 
-    AccountRepository repo = new AccountRepository();
+    AccountRepository accRepo = new AccountRepository();
     UserRepository userRepo = new UserRepository();
+    AdministratorRepository adminRepo = new AdministratorRepository();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -45,8 +52,154 @@ public class LoginActivity extends AppCompatActivity {
         database = new Database(this);
         initCreateAccountTextView();
         initViews();
-        repo.create(new Account(1234567, "Account 2 text", 100000, "Account 2 Historia"),this);
-        userRepo.create(new User(123456,"tomperez","1234567","123456","987654123"),this);
+
+        //<--------------------------------------INICIO DE METODOS ACCOUNT-------------------------------------------------------->
+        /*create de la account*/
+        accRepo.createAccount(new Account(1234567, "Account 2 text", 100000, "Account 2 Historia"),this);
+
+        /*get account by number*/
+        try {
+            List<Account> result = accRepo.getAccountByNumber(1234567,this);
+            Log.d("demo account", result.toString());
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+
+        /*get account bu Id Linked*/
+        try {
+            List<Account> result = accRepo.getAccountByIdLinked("Account 2 text", this);
+            Log.d("demo account", result.toString());
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+
+        /*update Account number*/
+        try {
+            accRepo.updateAccountNumber(1234567,12345678,this);
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+
+        /*update Account Linked Id*/
+        try {
+            accRepo.updateAccountdLinked(12345678, "Account 3 text", this);
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+
+        /*update Account Balance*/
+        try {
+            accRepo.updateAccountBalance(12345678, 120000, this);
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+
+        /*update Account Historial*/
+        try {
+            accRepo.updateAccountHistory(12345678, "Account 3 historia", this);
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+
+        /*delte account*/
+        try {
+            accRepo.deleteAccount(12345678,this);
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+
+
+        //<---------------------------------------INICIO DE METODOS USER-------------------------------------------------------->
+        /*create del usuario*/
+        userRepo.createUser(new User(123456,"tomperez","1234567","123456","987654123"),this);
+
+        /*get user by Id*/
+        try {
+            List<User> result = userRepo.getUserById(123456,this);
+            Log.d("demo user", result.toString());
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+
+        /*get user by name*/
+        try {
+            List<User> result = userRepo.getUserByName("tomperez", this);
+            Log.d("demo user", result.toString());
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+
+        /*Upadate del id del usuario*/
+        try {
+            userRepo.updateUserID(123456,654321,this);
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+
+        /*Change date del ususario*/
+        try {
+            userRepo.updateUserChangeDate(654321,this);
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+
+        /*Cambiar el nombre de usuario del User*/
+        try {
+            userRepo.updateUserName(654321,"tpereza",this);
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+
+
+        /*Cambiar contraseña del usuario*/
+        try {
+            userRepo.updateUserPassword(654321, "012345", this);
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+
+        /*Borrar usuario*/
+        try {
+            userRepo.deleteUser(654321,this);
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+
+
+        //<-----------------------------------------------INICIO METODOS ADMINISTRATOR-------------------------------->
+        /*create del administrator*/
+        adminRepo.createAdministrator(new Administrator(567890, "098765"), this);
+
+        /*gt administrator by id*/
+        try {
+            List <Administrator> result = adminRepo.getAdministratorById(567890, this);
+            Log.d("demo admin", result.toString());
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+
+        /*update Administrator Id*/
+        try {
+            adminRepo.updateAdministratorId(567890, 123456,this);
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+
+        /*update Administrator Password*/
+        try {
+            adminRepo.updateAdministratorPassword(123456, "123456",this);
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+
+        /*delete administrator*/
+        try {
+            adminRepo.deleteAdministrator(123456,this);
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+
+
         //set click event of login button
         buttonLogin.setOnClickListener(new View.OnClickListener() {
             @Override

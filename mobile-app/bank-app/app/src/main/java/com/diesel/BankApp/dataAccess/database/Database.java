@@ -13,6 +13,7 @@ import android.util.Base64;
 
 import com.diesel.BankApp.R;
 import com.diesel.BankApp.dataAccess.models.Account;
+import com.diesel.BankApp.dataAccess.models.Administrator;
 import com.diesel.BankApp.dataAccess.models.User;
 import com.j256.ormlite.android.apptools.OrmLiteSqliteOpenHelper;
 import com.j256.ormlite.dao.Dao;
@@ -31,8 +32,10 @@ public class Database extends OrmLiteSqliteOpenHelper {
 
     private Dao<Account, Integer> accDao = null;
     private Dao<User,Integer> userDao = null;
+    private Dao<Administrator,Integer> adminDao = null;
     private RuntimeExceptionDao<Account, Integer> accRuntimeDao = null;
     private RuntimeExceptionDao<User, Integer> userRuntimeDao = null;
+    private RuntimeExceptionDao<Administrator, Integer> adminRuntimeDao = null;
 
     private static final String DATABASE_NAME = "BankAppDb.db";
     private static final int DATABASE_VERSION = 1;
@@ -48,6 +51,7 @@ public class Database extends OrmLiteSqliteOpenHelper {
         try {
             TableUtils.createTable(connectionSource, Account.class);
             TableUtils.createTable(connectionSource,User.class);
+            TableUtils.createTable(connectionSource,Administrator.class);
         } catch (SQLException e) {
             e.printStackTrace();
         }
@@ -58,6 +62,7 @@ public class Database extends OrmLiteSqliteOpenHelper {
         try {
             TableUtils.dropTable(connectionSource,Account.class,true);
             TableUtils.dropTable(connectionSource,User.class,true);
+            TableUtils.dropTable(connectionSource,Administrator.class,true);
             onCreate(database, connectionSource);
 
         } catch (SQLException e) {
@@ -82,19 +87,37 @@ public class Database extends OrmLiteSqliteOpenHelper {
         return userDao;
     }
 
+    public Dao<Administrator, Integer> getAdminDao() throws SQLException {
 
-    public RuntimeExceptionDao<Account, Integer> getNoteRuntimeExceptionDao(){
+        if(adminDao == null){
+            adminDao = getDao(Administrator.class);
+        }
+
+        return adminDao;
+    }
+
+
+    public RuntimeExceptionDao<Account, Integer> getAccountRuntimeExceptionDao(){
         if(accRuntimeDao == null){
             accRuntimeDao = getRuntimeExceptionDao(Account.class);
         }
         return accRuntimeDao;
     }
+
     public RuntimeExceptionDao<User, Integer> getUserRuntimeExceptionDao(){
         if(userRuntimeDao == null){
             userRuntimeDao = getRuntimeExceptionDao(User.class);
         }
         return userRuntimeDao;
     }
+
+    public RuntimeExceptionDao<Administrator, Integer> getAdminRuntimeExceptionDao(){
+        if(adminRuntimeDao == null){
+            adminRuntimeDao = getRuntimeExceptionDao(Administrator.class);
+        }
+        return adminRuntimeDao;
+    }
+
 /*
     //using this method we can add users to user table
     public void addUser(User user) {
